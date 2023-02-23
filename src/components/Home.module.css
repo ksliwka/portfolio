@@ -1,0 +1,17 @@
+.scroll_down {
+  align-self: flex-end;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.container {
+  margin-top: 8rem;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.container h1 {
+  font-size: 3rem;
+}

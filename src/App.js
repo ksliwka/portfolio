@@ -1,18 +1,21 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Fragment } from "react";
 
-import HomePage from "./pages/Home";
-import RootLayout from "./pages/Root";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <RootLayout />,
-    children: [{ index: true, element: <HomePage /> }],
-  },
-]);
+import MainNavigation from "./components/Header";
+import HomePage from "./components/Home";
+import Contact from "./components/Contact";
+import About from "./components/About";
+import Projects from "./components/Projects";
 
 function App() {
-  return <RouterProvider router={router} />;
+  return (
+    <Fragment>
+      <MainNavigation />
+      <HomePage />
+      <About />
+      <Projects />
+      <Contact />
+    </Fragment>
+  );
 }
 
 export default App;

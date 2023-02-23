@@ -1,5 +1,33 @@
+* {
+  box-sizing: border-box;
+}
+
 :root {
-  font-family: 'Mulish', sans-serif;
+  width: 75%;
+  margin: 0 auto;
+  font-family: "Mulish", sans-serif;
+  background-color: #eee2df;
+
+  --color-gray-900: #1c1b1b;
 }
 
 
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* idk czy to ok */
+::-webkit-scrollbar {
+  display: none;
+}
+/* idk czy to ok */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  margin: 2rem auto;
+}
