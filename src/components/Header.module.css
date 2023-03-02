@@ -22,7 +22,7 @@
 .list a.active {
   color: var(--color-gray-900);
   text-decoration: underline;
+  cursor: pointer;
 }
-
 
 

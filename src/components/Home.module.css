@@ -13,5 +13,49 @@
   justify-content: flex-start;
 }
 .container h1 {
+  max-width: 500px;
+  width: 100%;
   font-size: 3rem;
+}
+.container h3 {
+  margin-top: 0.05rem;
+  font-size: 1.1rem;
+  font-weight: 400;
+}
+
+@media (max-width: 1024px) {
+  .container h1 {
+    font-size: 2.5rem;
+    max-width: 400px;
+    width: 100%;
+  }
+  .container h3 {
+    font-size: 1rem;
+    max-width: 400px;
+    width: 100%;
+  }
+  .container {
+    margin-top: 4rem;
+    height: 68vh;
+  }
+}
+
+@media (max-width: 600px) {
+  .container h1 {
+    font-size: 2.5rem;
+    max-width: 400px;
+    width: 100%;
+  }
+  .container h3 {
+    font-size: 1rem;
+    max-width: 400px;
+    width: 100%;
+  }
+  .container {
+    margin-top: 4rem;
+    height: 100vh;
+  }
+  .scroll_down {
+    display: none;
+  }
 }
