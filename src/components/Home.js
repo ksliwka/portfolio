@@ -1,5 +1,6 @@
 import classes from "./Home.module.css";
 import Circle from "./Circle";
+import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
 
 function HomePage() {
   return (
@@ -10,6 +11,15 @@ function HomePage() {
         </h1>
         <h3>PORTFOLIO BY KATARZYNA ŚLIWKA</h3>
         <Circle className={classes.circle}/>
+        <a >
+        <AiFillLinkedin className="icon"/>
+      </a>
+      <a className="icon">
+        <AiFillGithub className="icon"/>
+      </a>
+      <a className="icon">
+        <AiOutlineMail className="icon"/>
+      </a>
         <a className={classes.scroll_down}>Scroll Down</a>
         
       </div>

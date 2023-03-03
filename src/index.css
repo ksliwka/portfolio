@@ -3,18 +3,27 @@
 }
 
 :root {
+ 
+  --pink-color: #e86b61;
+  --color-gray-900: #1c1b1b;
+  --background-color: #eee2df;
+}
+
+body {
   width: 75%;
   margin: 0 auto;
   font-family: "Mulish", sans-serif;
-  background-color: #eee2df;
-
-  --color-gray-900: #1c1b1b;
+  background-color: var(--background-color); 
+  overflow-x: hidden;
+  font-weight: 400;
+  
 }
 
 
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 70px;
 }
 
 /* idk czy to ok */
@@ -31,6 +40,27 @@ ul {
 main {
   margin: 2rem auto;
 }
+
+
+/* a links for icons*/
+
+.icon {
+  width: 20px;
+  height: 20px;
+  transition: transform .2s;
+  color: black;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+
+
+
+/* a links for icons*/
+
+
+
 
 
 /* MEDIUM SIZE */
