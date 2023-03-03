@@ -1,41 +1,79 @@
-import classes from "./Home.module.css";
+import  "./Home.css";
 import Circle from "./Circle";
 import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
+import { useState, useEffect } from "react";
 
 import { Container, Row, Col } from "react-bootstrap";
 
 function HomePage() {
+  const [loopNum, setLoopNum] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const toRotate = ['KATARZYNA ŚLIWKA'];
+  const [text, setText] = useState("");
+  const [delta, setDelta] = useState(300 - Math.random() * 100);
+  const period = 2000;
+
+  useEffect(() => {
+    let ticker = setInterval(() => {
+      tick();
+    }, delta);
+    return () => {
+      clearInterval(ticker);
+    };
+  }, [text]);
+
+  const tick = () => {
+    let i = loopNum % toRotate.length;
+    let fullText = toRotate[i];
+    let updatedText = isDeleting
+      ? fullText.substring(0, text.length - 1)
+      : fullText.substring(0, text.length + 1);
+
+    setText(updatedText);
+
+    if (isDeleting) {
+      setDelta((prevDelta) => prevDelta / 2);
+    }
+
+    if (isDeleting && updatedText === fullText) {
+      setIsDeleting(true);
+      setDelta(period);
+    } else if (isDeleting && updatedText === "") {
+      setIsDeleting(false);
+      setLoopNum(loopNum + 1);
+      setDelta(500);
+    }
+  };
+
   return (
     <>
-      <div className="banner" id="home">
-        <Container>
+      <div id="home">
+        <Container className="mt-5">
           <Row className="align-items-center">
             <Col xs={12} md={6} xl={7}>
-              <h1 className="tagline">
+              <h1 className='header'>
                 Hi! My name is Katarzyna and I am Frontend Developer.
               </h1>
-              <p className="fs-6 mt-3">
-                PORTFOLIO BY <span className="wrap">KATARZYNA ŚLIWKA</span>{" "}
+              <p className='header-p'>
+                PORTFOLIO BY <span className="wrap">{text}</span>{" "}
               </p>
               <a>
                 <AiFillLinkedin className="icon" />
               </a>
 
-              <a className="icon">
+              <a className="icon ms-2">
                 <AiFillGithub className="icon" />
               </a>
 
-              <a className="icon">
+              <a className="icon ms-2">
                 <AiOutlineMail className="icon" />
               </a>
             </Col>
-            <Col>
-              <Circle className="img-fluid" />
+            <Col xs={12} md={6} xl={5}>
+              <Circle className="circle" />
             </Col>
           </Row>
         </Container>
-
-        <a className={classes.scroll_down}>Scroll Down</a>
       </div>
     </>
   );
