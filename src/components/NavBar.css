@@ -1,5 +1,7 @@
 nav.navbar {
-  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
   z-index: 99999;
   transition: 0.32 ease-in-out;
   background-color: var(--background-color);

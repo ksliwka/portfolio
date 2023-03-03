@@ -18,7 +18,7 @@ function NavBar() {
           <span className="navbar-toggler-icon" />
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className='mx-auto mt-2 justify-content-center' >
+          <Nav className='mx-auto' >
             <Nav.Link
               href="#home"
               className={
