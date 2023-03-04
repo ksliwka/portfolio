@@ -1,10 +1,9 @@
 import { Fragment } from "react";
 
-
+import Tools from "./components/Tools";
 import NavBar from "./components/NavBar";
 import HomePage from "./components/Home";
 import Contact from "./components/Contact";
-import About from "./components/About";
 import Projects from "./components/Projects";
 
 function App() {
@@ -12,7 +11,7 @@ function App() {
     <Fragment>
       <NavBar />
       <HomePage />
-      <About />
+      <Tools />
       <Projects />
       <Contact />
     </Fragment>

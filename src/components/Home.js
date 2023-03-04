@@ -47,26 +47,26 @@ function HomePage() {
 
   return (
     <>
-      <div id="home">
-        <Container className="mt-5">
-          <Row className="align-items-center">
+      <div id="home" classname="home-container">
+        <Container >
+          <Row className="align-items-center home-row">
             <Col xs={12} md={6} xl={7}>
               <h1 className='header'>
-                Hi! My name is Katarzyna and I am Frontend Developer.
+                Hi! My name is Katarzyna and I am Front-End Developer.
               </h1>
               <p className='header-p'>
                 PORTFOLIO BY <span className="wrap">{text}</span>{" "}
               </p>
               <a>
-                <AiFillLinkedin className="icon" />
+                <AiFillLinkedin className="social-icon" />
               </a>
 
               <a className="icon ms-2">
-                <AiFillGithub className="icon" />
+                <AiFillGithub className="social-icon" />
               </a>
 
               <a className="icon ms-2">
-                <AiOutlineMail className="icon" />
+                <AiOutlineMail className="social-icon" />
               </a>
             </Col>
             <Col xs={12} md={6} xl={5}>

@@ -4,6 +4,7 @@
 
 :root {
  
+ 
   --pink-color: #e86b61;
   --color-gray-900: #1c1b1b;
   --background-color: #eee2df;
@@ -37,21 +38,19 @@ ul {
   padding: 0;
 }
 
-main {
-  margin: 2rem auto;
-}
+
 
 
 /* a links for icons*/
 
-.icon {
+.social-icon {
   width: 20px;
   height: 20px;
   transition: transform .2s;
   color: black;
 }
 
-.icon:hover {
+.social-icon:hover {
   transform: scale(1.1);
 }
 
@@ -59,26 +58,3 @@ main {
 
 /* a links for icons*/
 
-
-
-
-
-/* MEDIUM SIZE */
-
-@media (max-width: 1024px){
-  :root{
-    /* width: 85%; */
-  }
-}
-
-/* MEDIUM SIZE */
-
-/* SMALL SIZE */
-
-@media (max-width: 600px){
-  :root{
-    /* width: 90%; */
-  }
-}
-
-/* SMALL SIZE */
