@@ -1,4 +1,4 @@
-import  "./Home.css";
+import "./Home.css";
 import Circle from "./Circle";
 import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { useState, useEffect } from "react";
@@ -8,7 +8,7 @@ import { Container, Row, Col } from "react-bootstrap";
 function HomePage() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ['KATARZYNA ŚLIWKA'];
+  const toRotate = ["KATARZYNA ŚLIWKA"];
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
@@ -48,13 +48,13 @@ function HomePage() {
   return (
     <>
       <div id="home" classname="home-container">
-        <Container >
+        <Container>
           <Row className="align-items-center home-row">
             <Col xs={12} md={6} xl={7}>
-              <h1 className='header'>
+              <h1 className="header">
                 Hi! My name is Katarzyna and I am Front-End Developer.
               </h1>
-              <p className='header-p'>
+              <p className="header-p">
                 PORTFOLIO BY <span className="wrap">{text}</span>{" "}
               </p>
               <a>
@@ -70,7 +70,11 @@ function HomePage() {
               </a>
             </Col>
             <Col xs={12} md={6} xl={5}>
-              <Circle className="circle" />
+              <Circle
+                radius="200"
+                gradientColor="#FF5722"
+                
+              />
             </Col>
           </Row>
         </Container>

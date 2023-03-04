@@ -17,3 +17,30 @@
 .wrap {
   border-right: 0.08em solid black;
 }
+
+/* .circle {
+    position: relative;
+      background-image: linear-gradient(55deg, #e86b61 30%, #eee2df 90%);
+     filter: blur(radius);
+   }
+   
+   .circle::before {
+     content: "";
+     position: absolute;
+   
+   
+     background-image: url(../../public/grain.png);
+     mix-blend-mode: soft-light;
+   } */
+
+   /* .circle {
+    transition: all 0.5s ease-in-out;
+  }
+  
+  .circle:hover {
+    transform: scale(1.2);
+  } */
+
+  .circle{
+    filter: blur(2px);
+  }

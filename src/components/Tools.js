@@ -1,5 +1,6 @@
 import "./Tools.css";
 import { Container, Row, Col } from "react-bootstrap";
+import Circle from "./Circle";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -53,6 +54,7 @@ export const Tools = () => {
           <Col>
             <div className="tool-bx">
               <h2 className="mb-5">Experience with:</h2>
+              <Circle className="tool-circle"/>
               <Carousel
                 responsive={responsive}
                 infinite={true}
