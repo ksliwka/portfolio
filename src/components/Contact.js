@@ -51,7 +51,7 @@ function Contact() {
           
           <h2>CONTACT</h2>
           <Col>
-          <p>Let's connect</p>
+          <p>Let's connect and work together.</p>
           </Col>
           <Col>
           <form onSubmit={handleSubmit}>

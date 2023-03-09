@@ -3,7 +3,7 @@
 }
 
 .tool-bx {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to left bottom,
     #e86b61,
     #e46767,
@@ -17,7 +17,7 @@
     #b15b8a,
     #a85b8d,
     #9e5b8e
-  );
+  ); */
   /* background: linear-gradient(
     135deg,
     rgba(232, 107, 97, 0.1),
@@ -29,11 +29,19 @@
   /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15); */
   max-width: 100%;
   /* border-radius: 64px; */
-  color: white;
+  /* color: white; */
   text-align: center;
   padding: 60px 50px;
-  margin-top: -60px;
+  /* margin-top: -60px; */
   z-index: 9999;
+}
+
+.tools h2{
+  font-size: 8rem;
+    font-weight: 1000;
+    letter-spacing: 8px;
+    opacity: 40%;
+    color: white;
 }
 
 .tools h5 {

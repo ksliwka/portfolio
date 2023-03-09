@@ -1,5 +1,6 @@
 import "./Tools.css";
-import { Container, Row, Col } from "react-bootstrap";
+import ToolCard from "./ToolCard";
+import { Container, Row, Col, Card } from "react-bootstrap";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -25,6 +26,84 @@ import {
   SiAdobephotoshop,
 } from "react-icons/si";
 
+const toolsArray = [
+  {
+    icon: <DiHtml5 className="icon" />,
+    title: "HTML",
+    field: "Front-End",
+  },
+  {
+    icon: <DiCss3 className="icon" />,
+    title: "CSS",
+    field: "Front-End",
+  },
+  {
+    icon: <DiJavascript1 className="icon" />,
+    title: "JavaScript",
+    field: "Front-End",
+  },
+  {
+    icon: <DiReact className="icon" />,
+    title: "React",
+    field: "Front-End",
+  },
+  {
+    icon: <SiRedux className="icon" />,
+    title: "React Redux",
+    field: "Front-End",
+  },
+  {
+    icon: <DiBootstrap className="icon" />,
+    title: "Bootstrap",
+    field: "Front-End",
+  },
+  {
+    icon: <SiReactrouter className="icon" />,
+    title: "React Router",
+    field: "Front-End",
+  },
+  {
+    icon: <DiNodejsSmall className="icon" />,
+    title: "Node",
+    field: "Back-End",
+  },
+  {
+    icon: <DiNpm className="icon" />,
+    title: "NPM",
+    field: "Back-End",
+  },
+  {
+    icon: <SiExpress className="icon" />,
+    title: "Express",
+    field: "Back-End",
+  },
+  {
+    icon: <DiMongodb className="icon" />,
+    title: "MongoDB",
+    field: "Database",
+  },
+  {
+    icon: <DiGithubBadge className="icon" />,
+    title: "Git/GitHub",
+    field: "Other",
+  },
+  {
+    icon: <SiAdobeillustrator className="icon" />,
+    title: "Adobe Illustrator",
+    field: "Design",
+  },
+  {
+    icon: <SiAdobephotoshop className="icon" />,
+    title: "Adobe Photoshop",
+    field: "Design",
+  },
+  {
+    icon: <SiAdobeindesign className="icon" />,
+    title: "Adobe Indesign",
+    field: "Design",
+  },
+];
+
 export const Tools = () => {
   const responsive = {
     superLargeDesktop: {
@@ -34,7 +113,7 @@ export const Tools = () => {
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -48,12 +127,10 @@ export const Tools = () => {
 
   return (
     <section className="tools" id="skills">
-      <Container >
+      <Container>
         <Row>
           <Col>
             <div className="tool-circle1"></div>
-            {/* <div className="tool-circle2"></div>
-            <div className="tool-circle3"></div> */}
             <div className="tool-bx">
               <h2 className="mb-5">Experience with:</h2>
 
@@ -62,81 +139,9 @@ export const Tools = () => {
                 infinite={true}
                 className="tool-slider"
               >
-                <div className="item">
-                  <DiHtml5 className="icon" />
-                  <h5>HTML</h5>
-                  <p>Front-End</p>
-                </div>
-                <div className="item">
-                  <DiCss3 className="icon" />
-                  <h5>CSS</h5>
-                  <p>Front-End</p>
-                </div>
-                <div className="item">
-                  <DiJavascript1 className="icon" />
-                  <h5>JavaScript</h5>
-                  <p>Front-End</p>
-                </div>
-                <div className="item">
-                  <DiReact className="icon" />
-                  <h5>React</h5>
-                  <p>Front-End</p>
-                </div>
-                <div className="item">
-                  <SiRedux className="icon" />
-                  <h5>React Redux</h5>
-                  <p>Front-End</p>
-                </div>
-                <div className="item">
-                  <DiBootstrap className="icon" />
-                  <h5>Bootstrap</h5>
-                  <p>Front-End</p>
-                </div>
-                <div className="item">
-                  <SiReactrouter className="icon" />
-                  <h5>React Router</h5>
-                  <p>Front-End</p>
-                </div>
-                <div className="item">
-                  <DiNodejsSmall className="icon" />
-                  <h5>Node</h5>
-                  <p>Back-End</p>
-                </div>
-                <div className="item">
-                  <DiNpm className="icon" />
-                  <h5>NPM</h5>
-                  <p>Back-End</p>
-                </div>
-                <div className="item">
-                  <SiExpress className="icon" />
-                  <h5>Express</h5>
-                  <p>Back-End</p>
-                </div>
-                <div className="item">
-                  <DiMongodb className="icon" />
-                  <h5>MongoDB</h5>
-                  <p>Database</p>
-                </div>
-                <div className="item">
-                  <DiGithubBadge className="icon" />
-                  <h5>Git/GitHub</h5>
-                  <p>Other</p>
-                </div>
-                <div className="item">
-                  <SiAdobeillustrator className="icon" />
-                  <h5>Adobe Illustrator</h5>
-                  <p>Design</p>
-                </div>
-                <div className="item">
-                  <SiAdobephotoshop className="icon" />
-                  <h5>Adobe Photoshop</h5>
-                  <p>Design</p>
-                </div>
-                <div className="item">
-                  <SiAdobeindesign className="icon" />
-                  <h5>Adobe Indesign</h5>
-                  <p>Design</p>
-                </div>
+                {toolsArray.map((tool, index) => {
+                  return <ToolCard key={index} {...tool} />;
+                })}
               </Carousel>
             </div>
           </Col>

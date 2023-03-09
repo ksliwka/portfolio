@@ -4,7 +4,7 @@ nav.navbar {
   margin-top: 1rem;
   z-index: 99999;
   transition: 0.32 ease-in-out;
-  background-color: var(--background-color);
+  background-color: none;
 }
 
 nav.navbar .navbar-nav .nav-link.navbar-link {

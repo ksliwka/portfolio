@@ -1,5 +1,6 @@
 import "./Home.css";
-import Circle from "./Circle";
+// import Circle from "./Circle";
+import Scroll from './Scroll'
 import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { useState, useEffect } from "react";
 
@@ -48,30 +49,38 @@ function HomePage() {
   return (
     <>
       <div id="home" className="home-container">
+        <div className="line"></div>
+        <div className="scroll"><Scroll /></div>
+        
         <Container>
           <Row className="align-items-center home-row">
-            <Col xs={12} md={6} xl={7}>
+          <div className="home-circle "></div>
+          <div className="home-circle-2 "></div>
+            <Col xs={12} md={9} xl={10}>
               <h1 className="header">
-                Hi! My name is Katarzyna and I am Front-End Developer.
+                Hello, My name is <span>Katarzyna </span>and I am Front-End
+                Developer.
               </h1>
               <p className="header-p">
                 PORTFOLIO BY <span className="wrap">{text}</span>{" "}
               </p>
               <a>
-                <AiFillLinkedin className="social-icon" />
+                <AiFillLinkedin className="home-icon" />
               </a>
 
               <a className="icon ms-2">
-                <AiFillGithub className="social-icon" />
+                <AiFillGithub className="home-icon" />
               </a>
 
               <a className="icon ms-2">
-                <AiOutlineMail className="social-icon" />
+                <AiOutlineMail className="home-icon" />
               </a>
             </Col>
-            <Col xs={12} md={6} xl={5}>
+            {/* <Col xs={12} md={6} xl={5}>
               <Circle radius="600" gradientColor="#e86b61" />
-            </Col>
+            </Col> */}
+            
+
           </Row>
         </Container>
       </div>
