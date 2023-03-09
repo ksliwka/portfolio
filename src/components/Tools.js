@@ -1,6 +1,5 @@
 import "./Tools.css";
 import { Container, Row, Col } from "react-bootstrap";
-import Circle from "./Circle";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -48,90 +47,93 @@ export const Tools = () => {
   };
 
   return (
-    <section className="tools" id="tools">
-      <Container>
+    <section className="tools" id="skills">
+      <Container >
         <Row>
           <Col>
+            <div className="tool-circle1"></div>
+            {/* <div className="tool-circle2"></div>
+            <div className="tool-circle3"></div> */}
             <div className="tool-bx">
               <h2 className="mb-5">Experience with:</h2>
-              <Circle className="tool-circle"/>
+
               <Carousel
                 responsive={responsive}
                 infinite={true}
                 className="tool-slider"
               >
                 <div className="item">
-                  <DiHtml5 className="icon"/>
+                  <DiHtml5 className="icon" />
                   <h5>HTML</h5>
                   <p>Front-End</p>
                 </div>
                 <div className="item">
-                  <DiCss3 className="icon"/>
+                  <DiCss3 className="icon" />
                   <h5>CSS</h5>
                   <p>Front-End</p>
                 </div>
                 <div className="item">
-                  <DiJavascript1 className="icon"/>
+                  <DiJavascript1 className="icon" />
                   <h5>JavaScript</h5>
                   <p>Front-End</p>
                 </div>
                 <div className="item">
-                  <DiReact className="icon"/>
+                  <DiReact className="icon" />
                   <h5>React</h5>
                   <p>Front-End</p>
                 </div>
                 <div className="item">
-                  <SiRedux className="icon"/>
+                  <SiRedux className="icon" />
                   <h5>React Redux</h5>
                   <p>Front-End</p>
                 </div>
                 <div className="item">
-                  <DiBootstrap className="icon"/>
+                  <DiBootstrap className="icon" />
                   <h5>Bootstrap</h5>
                   <p>Front-End</p>
                 </div>
                 <div className="item">
-                  <SiReactrouter className="icon"/>
+                  <SiReactrouter className="icon" />
                   <h5>React Router</h5>
                   <p>Front-End</p>
                 </div>
                 <div className="item">
-                  <DiNodejsSmall className="icon"/>
+                  <DiNodejsSmall className="icon" />
                   <h5>Node</h5>
                   <p>Back-End</p>
                 </div>
                 <div className="item">
-                  <DiNpm className="icon"/>
+                  <DiNpm className="icon" />
                   <h5>NPM</h5>
                   <p>Back-End</p>
                 </div>
                 <div className="item">
-                  <SiExpress className="icon"/>
+                  <SiExpress className="icon" />
                   <h5>Express</h5>
                   <p>Back-End</p>
                 </div>
                 <div className="item">
-                  <DiMongodb className="icon"/>
+                  <DiMongodb className="icon" />
                   <h5>MongoDB</h5>
                   <p>Database</p>
                 </div>
                 <div className="item">
-                  <DiGithubBadge className="icon"/>
+                  <DiGithubBadge className="icon" />
                   <h5>Git/GitHub</h5>
                   <p>Other</p>
                 </div>
                 <div className="item">
-                  <SiAdobeillustrator className="icon"/>
+                  <SiAdobeillustrator className="icon" />
                   <h5>Adobe Illustrator</h5>
                   <p>Design</p>
                 </div>
                 <div className="item">
-                  <SiAdobephotoshop className="icon"/>
+                  <SiAdobephotoshop className="icon" />
                   <h5>Adobe Photoshop</h5>
                   <p>Design</p>
                 </div>
                 <div className="item">
-                  <SiAdobeindesign className="icon"/>
+                  <SiAdobeindesign className="icon" />
                   <h5>Adobe Indesign</h5>
                   <p>Design</p>
                 </div>

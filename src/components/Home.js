@@ -47,7 +47,7 @@ function HomePage() {
 
   return (
     <>
-      <div id="home" classname="home-container">
+      <div id="home" className="home-container">
         <Container>
           <Row className="align-items-center home-row">
             <Col xs={12} md={6} xl={7}>
@@ -70,11 +70,7 @@ function HomePage() {
               </a>
             </Col>
             <Col xs={12} md={6} xl={5}>
-              <Circle
-                radius="200"
-                gradientColor="#FF5722"
-                
-              />
+              <Circle radius="600" gradientColor="#e86b61" />
             </Col>
           </Row>
         </Container>

@@ -5,6 +5,7 @@ import NavBar from "./components/NavBar";
 import HomePage from "./components/Home";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
+import Footer from "./components/Footer"
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Tools />
       <Projects />
       <Contact />
+      <Footer/>
     </Fragment>
   );
 }

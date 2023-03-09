@@ -11,10 +11,10 @@
 }
 
 body {
-  width: 75%;
+
   margin: 0 auto;
   font-family: "Mulish", sans-serif;
-  background-color: var(--background-color); 
+  background: linear-gradient(#eee2df, #f8f7f7);
   overflow-x: hidden;
   font-weight: 400;
   
@@ -43,16 +43,9 @@ ul {
 
 /* a links for icons*/
 
-.social-icon {
-  width: 20px;
-  height: 20px;
-  transition: transform .2s;
-  color: black;
-}
 
-.social-icon:hover {
-  transform: scale(1.1);
-}
+
+
 
 
 
