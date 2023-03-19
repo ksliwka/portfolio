@@ -126,13 +126,14 @@ export const Tools = () => {
   };
 
   return (
-    <section className="tools" id="skills">
+    <section className="tools" id="skills" data-scroll-section>
       <Container>
         <Row>
           <Col>
-            <div className="tool-circle1"></div>
+          <div className="home-circle "></div>
             <div className="tool-bx">
-              <h2 className="mb-5">Experience with:</h2>
+              <h1 className="tools-title">Experience with:</h1>
+              <h2 className="mb-5">Skills</h2>
 
               <Carousel
                 responsive={responsive}
@@ -144,6 +145,7 @@ export const Tools = () => {
                 })}
               </Carousel>
             </div>
+
           </Col>
         </Row>
       </Container>

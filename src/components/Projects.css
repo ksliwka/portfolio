@@ -1,28 +1,315 @@
-.projects {
-  padding: 150px 0 100px 0;
-  height: 100vh;
+
+
+.projects-heading{
+  position: absolute;
+  bottom: 0;
+  font-size: 10rem;
+  font-weight: 1000;
+  letter-spacing: 8px;
+  opacity: 20%;
+  color: white;
+  left: 60px;
+}
+/* .project-slider{
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+} */
+
+.project-box{
+  max-width: 100%;
+
+  text-align: center;
+  padding: 60px 0;
+
+  z-index: 9999;
+  
 }
 
-.project-bx{
-    background: linear-gradient(
-        135deg,
-        rgba(232, 107, 97, 0.1),
-        rgba(238, 226, 223, 0)
-      );
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-     
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15);
-    
-      border-radius: 64px;
-    
+
+
+
+
+  
+
+
+.gallery-wrap {
+background-color: #87a2ff;
+margin-left: -5vw;
+margin-right: -5vw;
+overflow-x: hidden;
+}
+
+.gallery-counter {
+position: absolute;
+top: 10%;
+left: 100px;
+z-index: 1;
+mix-blend-mode: difference;
+line-height: 16px;
+color: #dbd8d6;
+font-family: "Bai Jamjuree";
+font-weight: 600;
+font-size: 16px;
+-webkit-font-smoothing: antialiased;
+display: inline-block;
+}
+
+.gallery-counter .divider {
+content: "";
+background-color: white;
+width: 6.25vw;
+margin: 7px 10px;
+height: 1px;
+display: inline-block;
+}
+
+.gallery {
+height: 80vh;
+padding: 10vh 0;
+width: 400%;
+display: flex;
+flex-wrap: nowrap;
+}
+
+.gallery .gallery-item {
+width: 100%;
+height: 100%;
+position: relative;
+will-change: transform;
+}
+
+.gallery .gallery-item-info {
+position: absolute;
+bottom: 10%;
+z-index: 1;
+transform: translateX(-20%);
+color: #dbd8d6;
+color: white;
+}
+
+.gallery .gallery-item-info .gallery-info-title {
+line-height: 6vw;
+font-family: "Bai Jamjuree";
+font-weight: 600;
+font-size: 6vw;
+-webkit-font-smoothing: antialiased;
+}
+
+.gallery .gallery-item-info .gallery-info-subtitle {
+position: relative;
+line-height: 6vw;
+color: transparent;
+font-family: "Bodoni Moda";
+font-weight: 400;
+font-size: 6vw;
+-webkit-font-smoothing: antialiased;
+-webkit-text-stroke: 2px #dbd8d6;
+}
+
+.gallery .gallery-item-info .gallery-info-category {
+position: relative;
+line-height: 24px;
+font-family: "Bai Jamjuree";
+font-weight: 400;
+font-size: 24px;
+-webkit-font-smoothing: antialiased;
+margin-top: 2vh;
+}
+
+.gallery .gallery-item-wrapper {
+aspect-ratio: 16/9;
+height: 100%;
+display: grid;
+grid-template-columns: 20vw 1fr 200px;
+width: 100vw;
+}
+
+.gallery .gallery-item-wrapper.is-reveal .gallery-item-image {
+transform: scale(1);
+filter: none;
+}
+
+.gallery .gallery-item-image {
+background-size: cover;
+background-position: center;
+transform-origin: center;
+width: 100%;
+height: 100%;
+will-change: transform;
+transform: scale(0.7);
+transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+filter: grayscale(100%) sepia(20%) brightness(80%);
+}
+  
+
+  
+ 
+  
+  .gallery .gallery-item-info {
+  position: absolute;
+  bottom: 10%;
+  z-index: 1;
+  transform: translateX(-20%);
+  color: #dbd8d6;
+  color: white;
+  }
+  
+  .gallery .gallery-item-info .gallery-info-title {
+  line-height: 6vw;
+  font-family: "Bai Jamjuree";
+  font-weight: 600;
+  font-size: 6vw;
+  -webkit-font-smoothing: antialiased;
+  }
+  
+
+
+  
+
+  
+  .gallery .gallery-item-wrapper.is-reveal .gallery-item-image {
+  transform: scale(1);
+  filter: none;
+  }
+  
+
+
+
+
+  /* Project card */
+  .projects {
+    /* height: 100vh; */
+    background-color: #87a2ff;
+    /* z-index: -999; */
+    /* text-align: center;
+    position: relative; */
+    margin-left: -5vw;
+    margin-right: -5vw;
+  
+  
+  }
+
+
+
+  .gallery {
+    height: 100vh;
+    /* padding: 10vh 0; */
+    width: 400%;
+    display: flex;
+    flex-wrap: nowrap;
+    }
+
+
+    .gallery-counter {
+      position: absolute;
+      top: 10%;
+      left: 100px;
+      z-index: 1;
+      mix-blend-mode: difference;
+      line-height: 16px;
+      color: #dbd8d6;
+      font-family: "Bai Jamjuree";
+      font-weight: 600;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      display: inline-block;
+      }
       
-      padding: 60px 50px;
-      margin-top: -60px;
-      z-index: 9999;
+      .gallery-counter .divider {
+      content: "";
+      background-color: white;
+      width: 6.25vw;
+      margin: 7px 10px;
+      height: 1px;
+      display: inline-block;
+      }
+
+
+
+.project-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  will-change: transform;
 }
 
-.project-title {
-  font-weight: 700;
-  font-size: 25px;
+ .project-item-wrapper {
+  aspect-ratio: 16/9;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 20vw 1fr 200px;
+  width: 100vw;
+  }
+
+.project-background-title {
+  position: absolute;
+
+  right:0;
+  top: 50%;
+  transform: translateX(50%) translateY(-50%) rotate(90deg);
+
+  font-size: 6rem;
+  font-weight: 1000;
+  letter-spacing: 1.1rem;
+  color: rgb(255, 255, 255, 0.2);
+  text-transform: uppercase;
 }
+
+.project-container img {
+  background-size: cover;
+  background-position: center;
+  transform-origin: center;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+  transform: scale(0.7);
+  transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+  filter: grayscale(100%) sepia(20%) brightness(80%);
+}
+
+.project-number {
+  font-size: 5rem;
+  font-weight: 1000;
+  letter-spacing: 8px;
+  color: rgb(255, 255, 255, 0.8);
+  position: absolute;
+  top: 12%;
+  left: 5%;
+}
+
+.project-text {
+  color: white;
+  text-align: left;
+  margin-right: 3rem;
+}
+
+.project-buttons a {
+  background-color: transparent;
+  border: none;
+  border: 1px solid white;
+  padding: 10px;
+  border-radius: 20px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  min-width: 200px;
+
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+.project-buttons a:hover {
+scale: 20px;
+background-color: black;
+border: black;
+}
+
+.project-list{
+    flex: 0 0 200px;
+  background: var(--accent);
+  margin: 0 20px 0 0;
+}
+
+

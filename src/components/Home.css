@@ -61,7 +61,7 @@
   width: 25px;
   height: 25px;
   transition: transform 0.2s;
-  color: #1257cb;
+  color: black;
 }
 
 .home-icon:hover {
@@ -83,6 +83,3 @@
      mix-blend-mode: soft-light;
    } */
 
-.circle {
-  filter: blur(2px);
-}

@@ -4,7 +4,7 @@ import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
 
 const Footer = () => {
   return (
-    <section className="footer" id="footer">
+    <section className="footer" id="footer" data-scroll-section>
       <Container>
         <Row className="text-center footer-box">
           <h2>

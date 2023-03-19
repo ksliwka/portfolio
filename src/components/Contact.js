@@ -45,7 +45,7 @@ function Contact() {
   }
 
   return (
-    <section className="contact" id="contact">
+    <section className="contact" id="contact" data-scroll-section>
       <Container>
         <Row className="alig-items-center">
           

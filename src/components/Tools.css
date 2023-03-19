@@ -1,47 +1,45 @@
 .tools {
   padding: 0 0 50px 0;
+  position: relative;
+
 }
 
 .tool-bx {
-  /* background-image: linear-gradient(
-    to left bottom,
-    #e86b61,
-    #e46767,
-    #e0646e,
-    #db6174,
-    #d55f79,
-    #cf5e7d,
-    #c95d81,
-    #c25c84,
-    #ba5b88,
-    #b15b8a,
-    #a85b8d,
-    #9e5b8e
-  ); */
-  /* background: linear-gradient(
-    135deg,
-    rgba(232, 107, 97, 0.1),
-    rgba(238, 226, 223, 0)
-  ); */
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-
-  /* box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.15); */
+  
   max-width: 100%;
-  /* border-radius: 64px; */
-  /* color: white; */
+
   text-align: center;
   padding: 60px 50px;
-  /* margin-top: -60px; */
+
   z-index: 9999;
 }
 
-.tools h2{
-  font-size: 8rem;
-    font-weight: 1000;
-    letter-spacing: 8px;
-    opacity: 40%;
-    color: white;
+.tool-circle {
+  background-color: #87a2ff;
+  width: 60rem;
+  height: 30rem;
+  border-radius: 50%;
+  z-index: -1;
+  filter: blur(12rem);
+  position: absolute;
+  top: 20%;
+  right: 70%;
+}
+
+.tools h2 {
+  position: absolute;
+  bottom: -5%;
+  font-size: 10rem;
+  font-weight: 1000;
+  letter-spacing: 8px;
+  opacity: 20%;
+  color: white;
+}
+
+.tools-title {
+  font-size: 4rem;
+  font-weight: 1000;
+  letter-spacing: 8px;
 }
 
 .tools h5 {
@@ -51,7 +49,7 @@
 }
 
 .tools p {
-  /* color: var(--pink-color); */
+
   font-size: 18px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
@@ -69,48 +67,8 @@
   height: 50px;
 }
 
-/* .tool-circle1 {
-  position: relative;
-  width: 180px;
-  height: 180px;
-  top: 420px;
-  left: 1000px;
-  border-radius: 50%;
-  background-image: linear-gradient(55deg, #e86b61 30%, #eee2df 90%);
-  z-index: -20;
-} */
-/* .tool-circle2{
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    top: 1550px;
-    right: 600px;
-    border-radius: 50%;
-    background-image: linear-gradient(55deg, #8ecae6 30%, #eee2df 95%);
-    z-index: -20;
-}
-.tool-circle3{
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    top: 1220px;
-    right: 350px;
-    border-radius: 50%;
-    background-image: linear-gradient(55deg, #023047 30%, #eee2df 95%);
-    z-index: -20;
-} */
-
-/* .circle {
- position: relative;
-   background-image: linear-gradient(55deg, #e86b61 30%, #eee2df 90%);
-  filter: blur(radius);
-}
-
-.circle::before {
-  content: "";
-  position: absolute;
 
 
-  background-image: url(../../public/grain.png);
-  mix-blend-mode: soft-light;
-} */
+
+
+

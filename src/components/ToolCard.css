@@ -1,6 +1,41 @@
-.tool-card{
-background-color: red;
+.card-bx {
+  border: 1px solid black;
+  height: 220px;
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+}
 
+.card-bx li {
+  padding: 1rem;
+  
+}
+
+.card-bx:hover {
+    transition: 0.4s ease-in-out;
+    background-color: rgb(0,0,0,0.8);
+    color: white;
 }
 
 
+
+
+
+/* .card-bx::before {
+    content: "";
+  background-color: rgb(0, 0, 0, 0.8);
+  color: white;
+
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.card-bx:hover::before{
+    height: 100%;
+}  */

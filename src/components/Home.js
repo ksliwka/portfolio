@@ -48,7 +48,7 @@ function HomePage() {
 
   return (
     <>
-      <div id="home" className="home-container">
+      <section id="home" className="home-container" data-scroll-section>
         <div className="line"></div>
         <div className="scroll"><Scroll /></div>
         
@@ -83,7 +83,7 @@ function HomePage() {
 
           </Row>
         </Container>
-      </div>
+      </section>
     </>
   );
 }
