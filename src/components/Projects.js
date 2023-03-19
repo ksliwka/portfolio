@@ -942,6 +942,8 @@ import gsap  from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import useOnScreen from "./Hooks/useOnScreen";
 import cn from "classnames";
+import { Col, Container, Row } from "react-bootstrap";
+import { AiFillGithub, AiOutlineArrowRight } from "react-icons/ai";
 
 import "./Projects.css";
 import mockup from "../Assets/mockup.png";
@@ -950,43 +952,56 @@ gsap.registerPlugin(ScrollTrigger);
 
 const images = [
   {
-    id: 1,
-    src: mockup,
-    title: "Dracaena Trifasciata",
-    subtitle: "Live the Beauty",
-    category: "Shooting / Adv.Campaing",
-  },
+         number: "01",
+       title: "Plant app",
+         description:
+           "The application is created for people, who wamts to sell or buy plants from others. Plant app allows you to create your own account, sell plants by adding an advertisement about it and add reviews to other profiles.",
+     tools: "JS",
+      src: mockup,
+      gitHub: "https://github.com/ksliwka",
+      website: "sth",
+      color: '#87a2ff'
+    },
   {
-    id: 2,
-    src: mockup,
-    title: "Cereus Penuvianus",
-    subtitle: "Live the Beauty",
-    category: "Shooting / Adv.Campaing",
-  },
+         number: "02",
+       title: "Portfolio website",
+         description:
+           "The application is created for people, who wamts to sell or buy plants from others. Plant app allows you to create your own account, sell plants by adding an advertisement about it and add reviews to other profiles.",
+     tools: "JS",
+      src: mockup,
+      gitHub: "https://github.com/ksliwka",
+      website: "#87a2ff",
+      color:'#006663'
+    },
   {
-    id: 3,
-    src: mockup,
-    title: "Calliope",
-    subtitle: "Live the Beauty",
-    category: "Shooting / Adv.Campaing",
-  },
-  {
-    id: 4,
-    src: mockup,
-    title: "Golden Pothos",
-    subtitle: "Living Room",
-    category: "Shooting / Adv.Campaing",
-  },
+         number: "03",
+       title: "Food order app",
+         description:
+           "The application is created for people, who wamts to sell or buy plants from others. Plant app allows you to create your own account, sell plants by adding an advertisement about it and add reviews to other profiles.",
+     tools: "JS",
+      src: mockup,
+      gitHub: "https://github.com/ksliwka",
+      website: "sth",
+      color: '#00236B'
+    },
 ];
 function GalleryItem({
   src,
-  category,
-  subtitle,
+  tools,
   title,
+  description,
+  number,
+  gitHub,
+  website,
+  color,
   // updateActiveImage,
   index,
 }) {
   const ref = useRef(null);
+
+  const styles = {
+    backgroundColor: `${color}`,
+  }
 
   const onScreen = useOnScreen(ref, 0.5);
   
@@ -997,16 +1012,36 @@ function GalleryItem({
   // }, [onScreen, index]);
 
   return (
+
+
     <div
       className={cn("gallery-item-wrapper", { "is-reveal": onScreen })}
       ref={ref}
+      style={styles}
     >
       <div></div>
-      <div className="gallery-item">
+      <div className="gallery-item" >
+        
         <div className="gallery-item-info">
-          <h1 className="gallery-info-title">{title}</h1>
-          <h2 className="gallery-info-subtitle">{subtitle}</h2>
-          <p className="gallery-info-category">{category}</p>
+          <h2 className="project-number">-{number}</h2>
+      <h1 className="project-background-title">{title}</h1>
+         
+          <div className="project-text">
+            
+            <h3>About</h3>
+            <p className="project-description">{description}</p>
+
+            <p className="project-tools">{tools}</p>
+          </div>
+          <div className="project-buttons d-grid gap-3">
+            <a href={gitHub} type="button">
+              Code <AiOutlineArrowRight />
+            </a>
+
+            <a href={website} type="button">
+              Webiste <AiOutlineArrowRight />
+            </a>
+          </div>
         </div>
         <div
           className="gallery-item-image"
@@ -1027,7 +1062,7 @@ export default function Projects({ src, index, columnOffset }) {
 
 
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     let ctx = gsap.context(() => {
       const panels = gsap.utils.toArray(".gallery-item-wrapper");
       gsap.to(panels, {
@@ -1062,7 +1097,7 @@ export default function Projects({ src, index, columnOffset }) {
         </div>
         {images.map((image, index) => (
           <GalleryItem
-            key={image.id}
+            key={image.number}
             index={index}
             {...image}
             // updateActiveImage={handleUpdateActiveImage}
