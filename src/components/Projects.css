@@ -1,6 +1,6 @@
 
 
-.projects-heading{
+/* .projects-heading{
   position: absolute;
   bottom: 0;
   font-size: 10rem;
@@ -9,14 +9,14 @@
   opacity: 20%;
   color: white;
   left: 60px;
-}
+} */
 /* .project-slider{
   width: 80%;
   margin: 0 auto;
   position: relative;
 } */
 
-.project-box{
+/* .project-box{
   max-width: 100%;
 
   text-align: center;
@@ -24,7 +24,7 @@
 
   z-index: 9999;
   
-}
+} */
 
 
 
@@ -45,17 +45,17 @@ position: absolute;
 top: 10%;
 left: 100px;
 z-index: 1;
-mix-blend-mode: difference;
+/* mix-blend-mode: difference; */
 line-height: 16px;
-color: #dbd8d6;
-font-family: "Bai Jamjuree";
+color: rgb(255, 255, 255, 0.8);
+
 font-weight: 600;
 font-size: 16px;
--webkit-font-smoothing: antialiased;
+/* -webkit-font-smoothing: antialiased; */
 display: inline-block;
 }
 
-.gallery-counter .divider {
+ .divider {
 content: "";
 background-color: white;
 width: 6.25vw;
@@ -65,38 +65,39 @@ display: inline-block;
 }
 
 .gallery {
-height: 80vh;
+/* height: 80vh; */
 /* padding: 10vh 0; */
 width: 400%;
 display: flex;
 flex-wrap: nowrap;
 }
 
-.gallery .gallery-item {
-width: 100%;
+.gallery-item {
+/* width: 100%;
 height: 100%;
-position: relative;
+position: relative; */
 will-change: transform;
+border: 1px solid red;
 }
 
-.gallery .gallery-item-info {
+/* .gallery .gallery-item-info {
 position: absolute;
 bottom: 10%;
 z-index: 1;
 transform: translateX(-20%);
 color: #dbd8d6;
 color: white;
-}
+} */
 
-.gallery .gallery-item-info .gallery-info-title {
+/* .gallery .gallery-item-info .gallery-info-title {
 line-height: 6vw;
 
 font-weight: 600;
 font-size: 6vw;
 -webkit-font-smoothing: antialiased;
-}
+} */
 
-.gallery .gallery-item-info .gallery-info-subtitle {
+/* .gallery .gallery-item-info .gallery-info-subtitle {
 position: relative;
 line-height: 6vw;
 color: transparent;
@@ -105,17 +106,16 @@ font-weight: 400;
 font-size: 6vw;
 -webkit-font-smoothing: antialiased;
 -webkit-text-stroke: 2px #dbd8d6;
-}
+} */
 
-.gallery .gallery-item-info .gallery-info-category {
-position: relative;
-line-height: 24px;
-font-family: "Bai Jamjuree";
-font-weight: 400;
-font-size: 24px;
--webkit-font-smoothing: antialiased;
-margin-top: 2vh;
-}
+/* .gallery .gallery-item-info .gallery-info-category {
+/* position: relative; */
+/* line-height: 24px; */
+/* font-weight: 400; */
+/* font-size: 24px; */
+/* -webkit-font-smoothing: antialiased; */
+/* margin-top: 2vh; */
+/* } */ 
 
 .gallery .gallery-item-wrapper {
 aspect-ratio: 16/9;
@@ -125,7 +125,7 @@ grid-template-columns: 20vw 1fr 200px;
 width: 100vw;
 }
 
-.gallery .gallery-item-wrapper.is-reveal .gallery-item-image {
+ .gallery-item-image {
 transform: scale(1);
 filter: none;
 }
@@ -134,10 +134,10 @@ filter: none;
 background-size: cover;
 background-position: center;
 transform-origin: center;
-width: 100%;
-height: 100%;
+width: 80%;
+height: 80%;
 will-change: transform;
-transform: scale(0.7);
+transform: scale(0.5);
 transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
 filter: grayscale(100%) sepia(20%) brightness(80%);
 }
@@ -155,13 +155,13 @@ filter: grayscale(100%) sepia(20%) brightness(80%);
   color: white;
   }
   
-  .gallery .gallery-item-info .gallery-info-title {
+  /* .gallery .gallery-item-info .gallery-info-title {
   line-height: 6vw;
   font-family: "Bai Jamjuree";
   font-weight: 600;
   font-size: 6vw;
   -webkit-font-smoothing: antialiased;
-  }
+  } */
   
 
 
@@ -169,7 +169,7 @@ filter: grayscale(100%) sepia(20%) brightness(80%);
 
   
   .gallery .gallery-item-wrapper.is-reveal .gallery-item-image {
-  transform: scale(1);
+  transform: scale(0.8);
   filter: none;
   }
   
@@ -201,38 +201,16 @@ filter: grayscale(100%) sepia(20%) brightness(80%);
     }
 
 
-    .gallery-counter {
-      position: absolute;
-      top: 10%;
-      left: 100px;
-      z-index: 1;
-      mix-blend-mode: difference;
-      line-height: 16px;
-      color: #dbd8d6;
-      font-family: "Bai Jamjuree";
-      font-weight: 600;
-      font-size: 16px;
-      -webkit-font-smoothing: antialiased;
-      display: inline-block;
-      }
-      
-      .gallery-counter .divider {
-      content: "";
-      background-color: white;
-      width: 6.25vw;
-      margin: 7px 10px;
-      height: 1px;
-      display: inline-block;
-      }
+  
 
 
 
-.project-container {
+/* .project-container {
   width: 100%;
   height: 100%;
   position: relative;
   will-change: transform;
-}
+} */
 
  .project-item-wrapper {
   aspect-ratio: 16/9;
@@ -244,16 +222,17 @@ filter: grayscale(100%) sepia(20%) brightness(80%);
 
 .project-background-title {
   position: absolute;
-
+padding: 0 10% ;
   right:0;
   top: 50%;
   transform: translateX(50%) translateY(-50%) rotate(90deg);
 
-  font-size: 6rem;
+  font-size: 4rem;
   font-weight: 1000;
   letter-spacing: 1.1rem;
   color: rgb(255, 255, 255, 0.2);
   text-transform: uppercase;
+  text-align: center;
 }
 
 .project-container img {
@@ -274,8 +253,8 @@ filter: grayscale(100%) sepia(20%) brightness(80%);
   letter-spacing: 8px;
   color: rgb(255, 255, 255, 0.8);
   position: absolute;
-  top: 12%;
-  left: 5%;
+bottom: 50%;
+left: 8%;
 }
 
 .project-text {

@@ -942,8 +942,8 @@ import gsap  from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import useOnScreen from "./Hooks/useOnScreen";
 import cn from "classnames";
-import { Col, Container, Row } from "react-bootstrap";
 import { AiFillGithub, AiOutlineArrowRight } from "react-icons/ai";
+import {Row, Col, Container} from 'react-bootstrap'
 
 import "./Projects.css";
 import mockup from "../Assets/mockup.png";
@@ -982,7 +982,7 @@ const images = [
       src: mockup,
       gitHub: "https://github.com/ksliwka",
       website: "sth",
-      color: '#00236B'
+      color: 'black'
     },
 ];
 function GalleryItem({
@@ -1020,19 +1020,27 @@ function GalleryItem({
       style={styles}
     >
       <div></div>
-      <div className="gallery-item" >
-        
-        <div className="gallery-item-info">
-          <h2 className="project-number">-{number}</h2>
+      <h2 className="project-number">-{number}</h2>
+      <Container className="gallery-item" >
       <h1 className="project-background-title">{title}</h1>
-         
+      
+        <div className="gallery-item-info">
+          
+      
+        <Row>
+        <Col md={8}>
           <div className="project-text">
             
+          
             <h3>About</h3>
             <p className="project-description">{description}</p>
 
             <p className="project-tools">{tools}</p>
+            
+            
           </div>
+          </Col>
+          <Col md={4} >
           <div className="project-buttons d-grid gap-3">
             <a href={gitHub} type="button">
               Code <AiOutlineArrowRight />
@@ -1042,12 +1050,14 @@ function GalleryItem({
               Webiste <AiOutlineArrowRight />
             </a>
           </div>
+          </Col>
+          </Row>
         </div>
         <div
           className="gallery-item-image"
           style={{ backgroundImage: `url(${src})` }}
         ></div>
-      </div>
+      </Container>
       <div></div>
     </div>
   );
@@ -1069,10 +1079,10 @@ export default function Projects({ src, index, columnOffset }) {
         xPercent: -100 * (panels.length - 1),
         ease: "none",
         scrollTrigger: {
-          start: 'top top',
+          // start: 'top top',
           trigger: slider.current,
           pin: true,
-          scrub: 1,
+          scrub: 3,
           snap: 1 / (panels.length - 1),
           end: () => "+=" + slider.current.offsetWidth,
           markers: {startColor: "green", endColor: "red", fontSize: "12px"}
