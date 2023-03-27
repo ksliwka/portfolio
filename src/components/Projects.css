@@ -26,7 +26,9 @@
   
 } */
 
-
+.lineChildren {
+  transform: translate(0, 500px)
+}
 
 
 
@@ -77,7 +79,6 @@ flex-wrap: nowrap;
 height: 100%;
 position: relative; */
 will-change: transform;
-border: 1px solid red;
 }
 
 /* .gallery .gallery-item-info {

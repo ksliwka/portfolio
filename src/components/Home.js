@@ -2,7 +2,10 @@ import "./Home.css";
 // import Circle from "./Circle";
 import Scroll from './Scroll'
 import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import gsap from 'gsap'
+import SplitText from "../utils/Split3.min.js";
+
 
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -13,6 +16,28 @@ function HomePage() {
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
+
+useEffect(()=> {
+const split = new SplitText("#header-text", {
+  type: 'lines',
+  linesClass: 'lineChildren'
+});
+const splitParent = new SplitText('#header-text', {
+  type: 'lines',
+  linesClass: "lineParent"
+})
+gsap.to(split.lines, {
+  duration: 1.5,
+  y: 0,
+  opacity: 1,
+  stagger: 0.1,
+  ease: 'back',
+
+})
+}, [])
+
+ 
+
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -49,15 +74,18 @@ function HomePage() {
   return (
     <>
       <section id="home" className="home-container" data-scroll-section>
+  
         <div className="line"></div>
         <div className="scroll"><Scroll /></div>
+
         
         <Container>
           <Row className="align-items-center home-row">
           <div className="home-circle "></div>
           <div className="home-circle-2 "></div>
             <Col xs={12} md={9} xl={10}>
-              <h1 className="header">
+              <div id='header-text'>
+              <h1 className="header" >
                 Hello, My name is <span>Katarzyna </span>and I am Front-End
                 Developer.
               </h1>
@@ -75,6 +103,7 @@ function HomePage() {
               <a className="icon ms-2">
                 <AiOutlineMail className="home-icon" />
               </a>
+              </div>
             </Col>
             {/* <Col xs={12} md={6} xl={5}>
               <Circle radius="600" gradientColor="#e86b61" />

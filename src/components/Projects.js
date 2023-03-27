@@ -971,7 +971,7 @@ const images = [
       src: mockup,
       gitHub: "https://github.com/ksliwka",
       website: "#87a2ff",
-      color:'#006663'
+      color:'#C28CFF'
     },
   {
          number: "03",
@@ -982,7 +982,7 @@ const images = [
       src: mockup,
       gitHub: "https://github.com/ksliwka",
       website: "sth",
-      color: 'black'
+      color: '#006663'
     },
 ];
 function GalleryItem({
@@ -1020,7 +1020,7 @@ function GalleryItem({
       style={styles}
     >
       <div></div>
-      <h2 className="project-number">-{number}</h2>
+      <h2 className="project-number">{number}</h2>
       <Container className="gallery-item" >
       <h1 className="project-background-title">{title}</h1>
       
@@ -1082,7 +1082,7 @@ export default function Projects({ src, index, columnOffset }) {
           // start: 'top top',
           trigger: slider.current,
           pin: true,
-          scrub: 3,
+          scrub: 1,
           snap: 1 / (panels.length - 1),
           end: () => "+=" + slider.current.offsetWidth,
           markers: {startColor: "green", endColor: "red", fontSize: "12px"}

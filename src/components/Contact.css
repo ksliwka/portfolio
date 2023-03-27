@@ -3,6 +3,11 @@
     font-weight: 1000;
     letter-spacing: 8px;
     margin-bottom: 40px;
+
+}
+ .is-reveal{
+
+    opacity: 1;
 }
 
 .contact p {
@@ -14,7 +19,9 @@
 
 .contact {
     height: 100vh;
-    padding: 60px 0 200px 0;
+  
+    display: flex;
+    align-items: center;
   }
 
   .contact form input, .contact form textarea {
