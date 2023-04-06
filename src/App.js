@@ -7,62 +7,50 @@ import HomePage from "./components/Home";
 import Contact from "./components/Contact";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer"
-import useLocoScroll from "./components/Hooks/useLocoScroll";
-
+// import useLocoScroll from "./components/Hooks/useLocoScroll";
+import LocomotiveScroll from 'locomotive-scroll';
 function App() {
   const ref = useRef(null);
-  const [preloader, setPreload] = useState(true);
+
+  // useLocoScroll()
 
 
-  useLocoScroll(!preloader)
-
-  useEffect(() => {
-    if (!preloader && ref) {
-      if (typeof window === "undefined" || !window.document) {
-        return;
-      }
-    }
-  }, [preloader]);
-
-  const [timer, setTimer] = useState(3);
-
-  const id = useRef(null);
-
-  const clear = () => {
-    window.clearInterval(id.current);
-    setPreload(false);
-  };
-
-  useEffect(() => {
-    id.current = window.setInterval(() => {
-      setTimer((timer) => timer - 1);
-    }, 1000);
-    return () => clear();
-  }, []);
-
-  useEffect(() => {
-    if (timer === 0) {
-      clear();
-    }
-  }, [timer]);
 
   // if (typeof window === "undefined" || !window.document) {
   //   return null;
   // }
+  // const options = {
+  //   smooth: true,
+  // } 
 
-  return (<>
-    {preloader 
-    ? <div className='loader-wrapper absolute'><Spinner animation="grow" variant="light" /></div> :
-    <div data-scroll-container ref={ref} id='main-container' className="main-container">
+  let container = useRef(null);
+    
+  useEffect(() => {
+     
+     new LocomotiveScroll({
+        el: container,
+        smooth: true,
+        lerp: .06,
+        multiplier: .5
+     });
+
+  }, []);
+
+  return (
+
+      // <LocomotiveScrollProvider options={options} containerRef={ref}>
+      <div  data-scroll-container  ref={el => container = el} >
       <NavBar />
       <HomePage />
       <Tools />
       <Projects />
       <Contact />
       <Footer/>
-    </div>
-  }
-  </>
+      </div>
+      // </LocomotiveScrollProvider>
+
+      
+   
   );
 }
 

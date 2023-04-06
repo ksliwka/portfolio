@@ -74,22 +74,22 @@ gsap.to(split.lines, {
   return (
     <>
       <section id="home" className="home-container" data-scroll-section>
-  
-        <div className="line"></div>
+   
         <div className="scroll"><Scroll /></div>
 
         
         <Container>
-          <Row className="align-items-center home-row">
-          <div className="home-circle "></div>
+        <div className="home-circle "></div>
           <div className="home-circle-2 "></div>
-            <Col xs={12} md={9} xl={10}>
+          <Row className="align-items-sm-center  home-row">
+          
+            <Col xs={10} md={9} xl={10}>
               <div id='header-text'>
               <h1 className="header" >
                 Hello, My name is <span>Katarzyna </span>and I am Front-End
                 Developer.
               </h1>
-              <p className="header-p">
+              <p className="header-p d-none d-sm-block">
                 PORTFOLIO BY <span className="wrap">{text}</span>{" "}
               </p>
               <a>

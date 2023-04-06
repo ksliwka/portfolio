@@ -4,6 +4,7 @@
     letter-spacing: 8px;
     margin-bottom: 40px;
 
+
 }
  .is-reveal{
 
@@ -14,7 +15,7 @@
     font-size: 1.5rem;
     font-weight: 300;
     letter-spacing: 2px;
-    margin-left: 3rem;
+    margin-left: 1rem;
 }
 
 .contact {
@@ -82,3 +83,47 @@
   .contact form button:hover::before {
     width: 100%;
   }
+
+  /* 
+// Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) { 
+  .contact h2{
+    font-size: 4rem;
+    font-weight: 1000;
+  letter-spacing: 6px;
+}
+ }
+@media (min-width: 576px) { 
+  .contact h2{
+    font-size: 4rem;
+    font-weight: 1000;
+  letter-spacing: 6px;
+}
+ }
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) { 
+  .contact h2{
+    font-size: 4rem;
+    font-weight: 1000;
+  letter-spacing: 6px;
+}
+ }
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) { 
+  .contact h2{
+    font-size: 4rem;
+    font-weight: 1000;
+  letter-spacing: 6px;
+}
+ }
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) { 
+  .contact h2{
+    font-size: 4rem;
+    font-weight: 1000;
+  letter-spacing: 8px;
+}
+ }

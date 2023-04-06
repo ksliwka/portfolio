@@ -73,7 +73,10 @@ if(onScreen) setReveal(onScreen)
       opacity: 1,
       stagger: 0.1,
       ease: 'back',
-    
+    // scrollTrigger:{
+    //   start: 'top 90%',
+    //   end: 'bottom 10%',
+    // }
     })}
     }, [reveal])
 
@@ -84,10 +87,10 @@ if(onScreen) setReveal(onScreen)
         <Row >
           
           <h2 >CONTACT</h2>
-          <Col>
-          <p>Let's connect</p>
+          <Col className="d-none d-md-block">
+          <p >Let's connect</p>
           </Col>
-          <Col>
+          <Col sm={12} md={6}>
           <form onSubmit={handleSubmit}>
             
               <Col  className="px-1">

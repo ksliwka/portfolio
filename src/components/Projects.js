@@ -937,14 +937,10 @@
 //     </section>
 //   );
 // }
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import gsap  from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import useOnScreen from "./Hooks/useOnScreen";
-import cn from "classnames";
-import { AiFillGithub, AiOutlineArrowRight } from "react-icons/ai";
-import {Row, Col, Container} from 'react-bootstrap'
-
+import GalleryItem from "./ProjectCard";
 import "./Projects.css";
 import mockup from "../Assets/mockup.png";
 
@@ -985,92 +981,16 @@ const images = [
       color: '#006663'
     },
 ];
-function GalleryItem({
-  src,
-  tools,
-  title,
-  description,
-  number,
-  gitHub,
-  website,
-  color,
-  // updateActiveImage,
-  index,
-}) {
-  const ref = useRef(null);
 
-  const styles = {
-    backgroundColor: `${color}`,
-  }
-
-  const onScreen = useOnScreen(ref, 0.5);
-  
-  // useEffect(() => {
-  //   if (onScreen) {
-  //     updateActiveImage(index);
-  //   }
-  // }, [onScreen, index]);
-
-  return (
-
-
-    <div
-      className={cn("gallery-item-wrapper", { "is-reveal": onScreen })}
-      ref={ref}
-      style={styles}
-    >
-      <div></div>
-      <h2 className="project-number">{number}</h2>
-      <Container className="gallery-item" >
-      <h1 className="project-background-title">{title}</h1>
-      
-        <div className="gallery-item-info">
-          
-      
-        <Row>
-        <Col md={8}>
-          <div className="project-text">
-            
-          
-            <h3>About</h3>
-            <p className="project-description">{description}</p>
-
-            <p className="project-tools">{tools}</p>
-            
-            
-          </div>
-          </Col>
-          <Col md={4} >
-          <div className="project-buttons d-grid gap-3">
-            <a href={gitHub} type="button">
-              Code <AiOutlineArrowRight />
-            </a>
-
-            <a href={website} type="button">
-              Webiste <AiOutlineArrowRight />
-            </a>
-          </div>
-          </Col>
-          </Row>
-        </div>
-        <div
-          className="gallery-item-image"
-          style={{ backgroundImage: `url(${src})` }}
-        ></div>
-      </Container>
-      <div></div>
-    </div>
-  );
-}
 
 export default function Projects({ src, index, columnOffset }) {
-  const [activeImage, setActiveImage] = useState(1);
-
 
   const component = useRef();
   const slider = useRef();
 
 
+
+ 
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -1078,39 +998,48 @@ export default function Projects({ src, index, columnOffset }) {
       gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
         ease: "none",
+        
         scrollTrigger: {
           // start: 'top top',
+          start: "center center",
           trigger: slider.current,
           pin: true,
-          scrub: 1,
+          scrub: true,
           snap: 1 / (panels.length - 1),
+        
           end: () => "+=" + slider.current.offsetWidth,
-          markers: {startColor: "green", endColor: "red", fontSize: "12px"}
+
         }
       });
+
+   
     }, component);
     return () => ctx.revert();
-  });
+  })
 
-  // const handleUpdateActiveImage = (index) => {
-  //   setActiveImage(index + 1);
-  // };
+
+
+
 
   return (
-    <section   className="section-wrapper gallery-wrap" id="#project-container" ref={component}>
+    <section   className="gallery-wrap" id="#project-container" ref={component}>
 
       <div className="gallery" ref={slider}>
         <div className="gallery-counter">
-          <span>{activeImage}</span>
-          <span className="divider" />
-          <span>{images.length}</span>
+      
+
+          <p>Projects</p>
+
+     
+
+          
         </div>
+        
         {images.map((image, index) => (
           <GalleryItem
             key={image.number}
             index={index}
             {...image}
-            // updateActiveImage={handleUpdateActiveImage}
           />
         ))}
       </div>

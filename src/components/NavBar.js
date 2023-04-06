@@ -3,7 +3,6 @@ import { useState } from "react";
 
 import { Navbar, Container, Nav } from "react-bootstrap";
 
-
 function NavBar() {
   const [activeLink, setActiveLink] = useState("home");
 
@@ -12,13 +11,15 @@ function NavBar() {
   };
 
   return (
-    <Navbar expand="md">
+    <Navbar expand="md" sticky="top" className="mt-3">
       <Container>
-        <Navbar.Toggle aria-controls="basic-navbar-nav">
-          <span className="navbar-toggler-icon" />
+        <Navbar.Toggle aria-controls="basic-navbar-nav" className="m-4">
+          <span className="toggler-icon top-bar" />
+          <span className="toggler-icon middle-bar" />
+          <span className="toggler-icon bottom-bar" />
         </Navbar.Toggle>
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className='mx-auto' >
+          <Nav className="mx-auto">
             <Nav.Link
               href="#home"
               className={
@@ -35,10 +36,10 @@ function NavBar() {
               }
               onClick={() => onUpdateActiveLink("skills")}
             >
-              Skills
+              About
             </Nav.Link>
             <Nav.Link
-              href="#projects"
+              href="#project-container"
               className={
                 activeLink === "projects" ? "active navbar-link" : "navbar-link"
               }

@@ -1,39 +1,13 @@
-
-
-/* .projects-heading{
-  position: absolute;
-  bottom: 0;
-  font-size: 10rem;
-  font-weight: 1000;
-  letter-spacing: 8px;
-  opacity: 20%;
-  color: white;
-  left: 60px;
-} */
-/* .project-slider{
-  width: 80%;
-  margin: 0 auto;
-  position: relative;
-} */
-
-/* .project-box{
-  max-width: 100%;
-
-  text-align: center;
-  padding: 60px 0;
-
-  z-index: 9999;
-  
-} */
-
 .lineChildren {
   transform: translate(0, 500px)
 }
 
-
-
+/* .gallery p{
+  mix-blend-mode: difference;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
   
-
+} */
 
 .gallery-wrap {
 /* background-color: #87a2ff;
@@ -45,7 +19,7 @@ overflow-x: hidden;
 .gallery-counter {
 position: absolute;
 top: 10%;
-left: 100px;
+left: 7rem;
 z-index: 1;
 /* mix-blend-mode: difference; */
 line-height: 16px;
@@ -57,66 +31,31 @@ font-size: 16px;
 display: inline-block;
 }
 
- .divider {
+ /* .divider {
 content: "";
 background-color: white;
 width: 6.25vw;
 margin: 7px 10px;
 height: 1px;
 display: inline-block;
-}
+} */
 
 .gallery {
 /* height: 80vh; */
 /* padding: 10vh 0; */
 width: 400%;
 display: flex;
+align-items: center;
 flex-wrap: nowrap;
+
 }
 
 .gallery-item {
-/* width: 100%;
-height: 100%;
-position: relative; */
 will-change: transform;
+
+
 }
 
-/* .gallery .gallery-item-info {
-position: absolute;
-bottom: 10%;
-z-index: 1;
-transform: translateX(-20%);
-color: #dbd8d6;
-color: white;
-} */
-
-/* .gallery .gallery-item-info .gallery-info-title {
-line-height: 6vw;
-
-font-weight: 600;
-font-size: 6vw;
--webkit-font-smoothing: antialiased;
-} */
-
-/* .gallery .gallery-item-info .gallery-info-subtitle {
-position: relative;
-line-height: 6vw;
-color: transparent;
-font-family: "Bodoni Moda";
-font-weight: 400;
-font-size: 6vw;
--webkit-font-smoothing: antialiased;
--webkit-text-stroke: 2px #dbd8d6;
-} */
-
-/* .gallery .gallery-item-info .gallery-info-category {
-/* position: relative; */
-/* line-height: 24px; */
-/* font-weight: 400; */
-/* font-size: 24px; */
-/* -webkit-font-smoothing: antialiased; */
-/* margin-top: 2vh; */
-/* } */ 
 
 .gallery .gallery-item-wrapper {
 aspect-ratio: 16/9;
@@ -125,6 +64,9 @@ display: grid;
 grid-template-columns: 20vw 1fr 200px;
 width: 100vw;
 }
+
+
+
 
  .gallery-item-image {
 transform: scale(1);
@@ -147,22 +89,15 @@ filter: grayscale(100%) sepia(20%) brightness(80%);
   
  
   
-  .gallery .gallery-item-info {
+.gallery-item-info {
   position: absolute;
   bottom: 10%;
   z-index: 1;
   transform: translateX(-20%);
   color: #dbd8d6;
-  color: white;
+
+
   }
-  
-  /* .gallery .gallery-item-info .gallery-info-title {
-  line-height: 6vw;
-  font-family: "Bai Jamjuree";
-  font-weight: 600;
-  font-size: 6vw;
-  -webkit-font-smoothing: antialiased;
-  } */
   
 
 
@@ -173,6 +108,8 @@ filter: grayscale(100%) sepia(20%) brightness(80%);
   transform: scale(0.8);
   filter: none;
   }
+
+  
   
 
 
@@ -180,15 +117,10 @@ filter: grayscale(100%) sepia(20%) brightness(80%);
 
   /* Project card */
   .projects {
-    /* height: 100vh; */
     background-color: #87a2ff;
-    /* z-index: -999; */
-    /* text-align: center;
-    position: relative; */
+
     margin-left: -5vw;
     margin-right: -5vw;
-  
-  
   }
 
 
@@ -206,20 +138,7 @@ filter: grayscale(100%) sepia(20%) brightness(80%);
 
 
 
-/* .project-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  will-change: transform;
-} */
 
- .project-item-wrapper {
-  aspect-ratio: 16/9;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 20vw 1fr 200px;
-  width: 100vw;
-  }
 
 .project-background-title {
   position: absolute;
@@ -253,9 +172,11 @@ padding: 0 10% ;
   font-weight: 1000;
   letter-spacing: 8px;
   color: rgb(255, 255, 255, 0.8);
-  position: absolute;
-bottom: 50%;
-left: 8%;
+
+
+  position: relative;
+bottom: 25vh;
+left: 0;
 }
 
 .project-text {
@@ -282,8 +203,8 @@ left: 8%;
 }
 .project-buttons a:hover {
 scale: 20px;
-background-color: black;
-border: black;
+background-color: white;
+color: black;
 }
 
 .project-list{

@@ -132,13 +132,15 @@ export const Tools = () => {
           <Col>
           <div className="home-circle "></div>
             <div className="tool-bx">
-              <h1 className="tools-title">Experience with:</h1>
-              <h2 className="mb-5">Skills</h2>
+              <h1 className="tools-title"  >About</h1>
+              <p data-scroll>Hello! I'm front-end developer who is looking for a first job or an internship. I am an eager to learn person, my hobby is making responsive interfaces.</p>
+              <h2 className="mb-5 d-none d-lg-block" >Skills</h2>
 
               <Carousel
                 responsive={responsive}
                 infinite={true}
                 className="tool-slider"
+                
               >
                 {toolsArray.map((tool, index) => {
                   return <ToolCard key={index} {...tool} />;
