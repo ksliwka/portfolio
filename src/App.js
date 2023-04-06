@@ -25,16 +25,16 @@ function App() {
 
   let container = useRef(null);
     
-  useEffect(() => {
+//   useEffect(() => {
      
-     new LocomotiveScroll({
-        el: container,
-        smooth: true,
-        lerp: .06,
-        multiplier: .5
-     });
+//      new LocomotiveScroll({
+//         el: container,
+//         smooth: true,
+//         lerp: .06,
+//         multiplier: .5
+//      });
 
-  }, []);
+//   }, []);
 
   return (
 

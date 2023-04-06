@@ -2,12 +2,6 @@
   transform: translate(0, 500px)
 }
 
-/* .gallery p{
-  mix-blend-mode: difference;
-  -webkit-font-smoothing: antialiased;
-  display: inline-block;
-  
-} */
 
 .gallery-wrap {
 /* background-color: #87a2ff;
@@ -31,14 +25,6 @@ font-size: 16px;
 display: inline-block;
 }
 
- /* .divider {
-content: "";
-background-color: white;
-width: 6.25vw;
-margin: 7px 10px;
-height: 1px;
-display: inline-block;
-} */
 
 .gallery {
 /* height: 80vh; */
@@ -57,7 +43,7 @@ will-change: transform;
 }
 
 
-.gallery .gallery-item-wrapper {
+.gallery-item-wrapper {
 aspect-ratio: 16/9;
 height: 100vh;
 display: grid;
@@ -73,7 +59,7 @@ transform: scale(1);
 filter: none;
 }
 
-.gallery .gallery-item-image {
+.gallery-item-image {
 background-size: cover;
 background-position: center;
 transform-origin: center;
