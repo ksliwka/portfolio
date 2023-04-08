@@ -22,36 +22,13 @@ nav.navbar .navbar-nav a.nav-link.navbar-link:hover::after {
   opacity: 0;
   transition: all 0.5s;
 }
-/* 
-nav.navbar .navbar-nav a.nav-link.navbar-link:hover::after {
-  content: "";
-  opacity: 1;
-  height: 2px;
-  width: 70%;
-  background-color: black;
-  position: absolute;
-  bottom: 0;
-  right: 15%;
-  opacity: 1;
-} */
+
 
 nav.navbar .navbar-nav a.navbar-link.navbar-link.active {
   opacity: 1;
   text-decoration: underline;
 }
-/* 
-.navbar-toggler{
-  border: none;
-}
-.navbar-toggler:focus{
-  border: none;
-}
-.navbar-toggler:active{
-  border: none;
-}
-.navbar-toggler:hover{
-  border: none;
-} */
+
 
 
 .navbar-toggler {
@@ -78,7 +55,7 @@ nav.navbar .navbar-nav a.navbar-link.navbar-link.active {
   position: absolute;
   height: 3px;
   width: 100%;
-  background: rgba(255, 255, 255, 0.5);;
+  background: rgba(0, 0, 0);
   border-radius: 1px;
   opacity: 1;
   left: 0;

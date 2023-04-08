@@ -126,7 +126,7 @@ export const Tools = () => {
   };
 
   return (
-    <section className="tools" id="skills" data-scroll-section>
+    <section className="tools" id="skills">
       <Container>
         <Row>
           <Col>

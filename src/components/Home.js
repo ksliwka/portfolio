@@ -73,7 +73,7 @@ gsap.to(split.lines, {
 
   return (
     <>
-      <section id="home" className="home-container" data-scroll-section>
+      <section id="home" className="home-container" >
    
         <div className="scroll"><Scroll /></div>
 

@@ -8,7 +8,7 @@ import {Row, Col, Container} from 'react-bootstrap'
 
 import "./Projects.css";
 
-function GalleryItem({
+function ProjectItem({
   src,
   tools,
   title,
@@ -33,19 +33,19 @@ function GalleryItem({
 
 
     <div
-      className={cn("gallery-item-wrapper", { "is-reveal": onScreen })}
+      className={cn("project-item-wrapper", { "is-reveal": onScreen })}
       ref={ref}
       style={styles}
     >
       
       <div></div>
       
-      <Container className="gallery-item " >
+      <Container className="project-item " >
 
       
       <h1 className="project-background-title">{title}</h1>
       
-        <div className="gallery-item-info">
+        <div className="project-info">
         <h2 className="project-number "    >{number}</h2>
        
         <Row>
@@ -76,7 +76,7 @@ function GalleryItem({
           </Row>
         </div>
         <div
-          className="gallery-item-image"
+          className="project-image"
           style={{ backgroundImage: `url(${src})` }}
         ></div>
       </Container>
@@ -85,4 +85,4 @@ function GalleryItem({
   );
 }
 
-export default GalleryItem
+export default ProjectItem

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap  from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import GalleryItem from "./ProjectCard";
+import ProjectItem from "./ProjectCard";
 import "./Projects.css";
 import mockup from "../Assets/mockup.png";
 
@@ -55,7 +55,7 @@ export default function Projects({ src, index, columnOffset }) {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      const panels = gsap.utils.toArray(".gallery-item-wrapper");
+      const panels = gsap.utils.toArray(".project-item-wrapper");
       gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
         ease: "none",
@@ -83,10 +83,10 @@ export default function Projects({ src, index, columnOffset }) {
 
 
   return (
-    <section   className="gallery-wrap" id="#project-container" ref={component}>
+    <section   className="project-wrap" id="#project-container" ref={component}>
 
-      <div className="gallery" ref={slider}>
-        <div className="gallery-counter">
+      <div className="projects" ref={slider}>
+        <div className="project-section-title">
       
 
           <p>Projects</p>
@@ -97,7 +97,7 @@ export default function Projects({ src, index, columnOffset }) {
         </div>
         
         {images.map((image, index) => (
-          <GalleryItem
+          <ProjectItem
             key={image.number}
             index={index}
             {...image}

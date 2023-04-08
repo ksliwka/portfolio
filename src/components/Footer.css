@@ -2,13 +2,13 @@
   background-color: rgb(30, 29, 29);
   width: 100vw;
 }
-.op-class{
+/* .op-class{
   opacity: 0;
 }
 .fadeIn {
   opacity: 1;
   transition: opacity 4s ;
-}
+} */
 
 .footer-box {
   padding: 10% 0;
