@@ -8,13 +8,10 @@ nav.navbar {
 
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 600;
-  /* color: black; */
-
   letter-spacing: 0.8px;
   color: rgb(0, 0, 0);
   padding: 0 25px;
   opacity: 0.5;
-
   position: relative;
 }
 
@@ -23,19 +20,16 @@ nav.navbar .navbar-nav a.nav-link.navbar-link:hover::after {
   transition: all 0.5s;
 }
 
-
 nav.navbar .navbar-nav a.navbar-link.navbar-link.active {
   opacity: 1;
   text-decoration: underline;
 }
 
-
-
 .navbar-toggler {
   width: 20px;
   height: 20px;
   position: relative;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .navbar-toggler,
@@ -48,8 +42,6 @@ nav.navbar .navbar-nav a.navbar-link.navbar-link.active {
   position: relative;
 }
 
-
-
 .toggler-icon {
   display: block;
   position: absolute;
@@ -60,13 +52,12 @@ nav.navbar .navbar-nav a.navbar-link.navbar-link.active {
   opacity: 1;
   left: 0;
   transform: rotate(0deg);
-  transition: .25s ease-in-out;
+  transition: 0.25s ease-in-out;
 }
 
 .middle-bar {
   margin-top: 0px;
 }
-
 
 /* State when the navbar is collapsed */
 
@@ -106,61 +97,3 @@ nav.navbar .navbar-nav a.navbar-link.navbar-link.active {
   top: inherit;
   transform: rotate(-135deg);
 }
-
-
-
-
-
-
-/* nav.navbar .navbar-toggler:active,
-nav.navbar .navbar-toggler:focus {
-  outline: none;
-  box-shadow: none;
-} */
-
-/* nav.navbar .navbar-toggler-icon {
-  width: 24px;
-  height: 17px;
-  background-image: none;
-  border: none;
-  position: relative;
-  border-bottom: 2px solid white;
-  transition: all 300ms linear;
-  top: -2px;
-  border: none;
-} */
-
-/* nav.navbar .navbar-toggler-icon:focus {
-  border-bottom: 2px solid white;
-} */
-
-/* nav.navbar .navbar-toggler-icon:after,
-nav.navbar .navbar-toggler-icon:before {
-  width: 24px;
-  position: fixed;
-  height: 2px;
-  background-color: white;
-  top: 0;
-  left: 0;
-  content: "";
-  z-index: 2;
-  transition: all 300ms linear;
-} */
-
-/* nav.navbar .navbar-toggler-icon:after {
-  top: 8px;
-} */
-
-/* nav.navbar .navbar-toggler[aria-expended="true"] .navbar-toggler-icon:after {
-  transform: rotate(45deg);
-  background-color: white;
-  height: 2px;
-}
-nav.navbar .navbar-toggler[aria-expended="true"] .navbar-toggler-icon:before {
-  transform: translateY(8px) rotate(-45deg);
-  background-color: white;
-  height: 2px;
-}
-nav.navbar .navbar-toggler[aria-expended="true"] .navbar-toggler-icon {
-  border-color: transparent;
-} */
