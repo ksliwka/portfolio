@@ -1,0 +1,18 @@
+.collapse-btn{
+    border: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255, 0.8);
+    text-decoration: underline;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.collapse-btn:hover{
+   
+    border: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    text-decoration: underline;
+    font-size: 1rem;
+    cursor: pointer;
+}

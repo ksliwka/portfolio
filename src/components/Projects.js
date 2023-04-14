@@ -14,7 +14,8 @@ const images = [
     description:
       "The application is created for people, who wamts to sell or buy plants from others. Plant app allows you to create your own account, sell plants by adding an advertisement about it and add reviews to other profiles.",
     tools: "JS",
-    src: mockup,
+    srclg: mockup,
+    srcmd: 'https://images.unsplash.com/photo-1672217617440-1dd3e9417ce1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
     gitHub: "https://github.com/ksliwka",
     website: "sth",
     color: "#87a2ff",
@@ -25,7 +26,8 @@ const images = [
     description:
       "The application is created for people, who wamts to sell or buy plants from others. Plant app allows you to create your own account, sell plants by adding an advertisement about it and add reviews to other profiles.",
     tools: "JS",
-    src: mockup,
+    srclg: mockup,
+    srcmd: 'https://images.unsplash.com/photo-1669905910914-b475d82683b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
     gitHub: "https://github.com/ksliwka",
     website: "#87a2ff",
     color: "#C28CFF",
@@ -36,7 +38,8 @@ const images = [
     description:
       "The application is created for people, who wamts to sell or buy plants from others. Plant app allows you to create your own account, sell plants by adding an advertisement about it and add reviews to other profiles.",
     tools: "JS",
-    src: mockup,
+    srclg: mockup,
+    srcmd: 'https://images.unsplash.com/photo-1669905910914-b475d82683b4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80',
     gitHub: "https://github.com/ksliwka",
     website: "sth",
     color: "#006663",

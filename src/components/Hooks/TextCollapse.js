@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './TextCollapse.css'
 
 function TextCollapse({ text, maxLength }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
@@ -8,12 +9,12 @@ function TextCollapse({ text, maxLength }) {
   const truncatedWords = isCollapsed ? words.slice(0, maxLength) : words;
 
   return (
-    <div>
-      <p>{truncatedWords.join(' ')}</p>
+    <div className='pb-2'>
+      <p className='pt-2'>{truncatedWords.join(' ')}</p>
       {words.length > maxLength && (
-        <button onClick={toggleCollapse}>
+        <a onClick={toggleCollapse} className='collapse-btn'>
           {isCollapsed ? 'Read More' : 'Read Less'}
-        </button>
+        </a>
       )}
     </div>
   );
