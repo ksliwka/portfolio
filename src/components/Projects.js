@@ -27,7 +27,7 @@ const images = [
   },
   {
     number: "02",
-    title: "Portfolio website",
+    title: "Portfolio",
     description:
       "The portfolio website was built with React and features learned skills with additional animations for a visually engaging experience.",
     tools: "JS",
@@ -83,7 +83,6 @@ export default function Projects({ src, index, columnOffset }) {
         <div className="project-section-title d-none d-md-block">
           <p>Projects</p>
         </div>
-
         {images.map((image, index) => (
           <ProjectItem key={image.number} index={index} {...image} />
         ))}

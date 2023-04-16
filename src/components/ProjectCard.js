@@ -38,10 +38,14 @@ function ProjectItem({
           style={{ backgroundImage: `url(${srcmd})` }}
         >
           </div> */}
-          <div
+          {/* <div
           className="project-image  d-block d-md-none"
           style={{ backgroundImage: `url(${srcmd})` }}
-        ></div>
+        ></div> */}
+        <div
+          className="project-small-title  d-block d-md-none"
+          
+        >{title}</div> 
       <div></div>
 
       <div className="project-item  ">
@@ -72,7 +76,6 @@ function ProjectItem({
             <Col md={8}>
               <div className="project-text " id="project-description">
                 <h3 className="d-none d-lg-block">About</h3>
-                <h3 className="d-block d-lg-none">{title}</h3>
 
                 
                 <p className="project-description  d-none d-md-block">
