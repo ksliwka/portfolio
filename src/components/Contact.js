@@ -108,9 +108,13 @@ if(onScreen) setReveal(onScreen)
         <Row >
           
           <h2 >CONTACT</h2>
-          <Col className="d-none d-md-block">
+          <Col >
+          <p>Email: sliwkakatarzyna12@gmail.com</p>
+          <div className="d-none d-md-block">
           <p >Let's connect</p>
+          </div>
           </Col>
+          
           <Col sm={12} md={6}>
           <form onSubmit={handleSubmit} ref={form}>
             

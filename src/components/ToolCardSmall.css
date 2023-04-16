@@ -2,12 +2,7 @@
   font-size: 20px;
 }
 
-.ToolCardSmall li {
-  font-size: 15px;
-}
-
 .ToolCardSmall {
-  /* height: 100vh; */
   margin-bottom: 10rem;
 }
 
@@ -22,8 +17,4 @@
   height: 0.5px;
   background-color: white;
   opacity: 30%;
-}
-
-.field {
-  text-align: center;
 }
