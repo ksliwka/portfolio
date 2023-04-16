@@ -6,11 +6,23 @@ import SplitText from "../utils/Split3.min.js";
 import useOnScreen from "./Hooks/useOnScreen" 
 import cn from 'classnames'
 
+import emailjs from '@emailjs/browser';
+
+
+
+
+
 
 function Contact() {
 
   const ref = useRef();
   const [reveal, setReveal] = useState(false)
+
+  const form = useRef();
+
+
+
+ 
 
 
 
@@ -41,24 +53,37 @@ if(onScreen) setReveal(onScreen)
   }
 
   const handleSubmit = async(e) => {
-    e.preventDefault()
+    e.preventDefault();
     setButtonText('Sendning...')
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    })
+
+    emailjs.sendForm('service_4noaifq', 'template_lsl58hl', form.current, 'IuZMVgyEjq6bjcM7M')
     setButtonText('Send')
-    let result = response.json()
-    setFormDetails(formInitialDetails)
-    if(result.code === 200) {
-      setStatus({success: true, message: 'Message sent successfully'})
-    } else {
-      setStatus({ success: false, message: 'Something went wrong, please try again later'})
-    }
-  }
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
+  // const handleSubmit = async(e) => {
+  //   e.preventDefault()
+  //   setButtonText('Sendning...')
+  //   let response = await fetch("http://localhost:5000/contact", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json;charset=utf-8",
+  //     },
+  //     body: JSON.stringify(formDetails),
+  //   })
+  //   setButtonText('Send')
+  //   let result = response.json()
+  //   setFormDetails(formInitialDetails)
+  //   if(result.code === 200) {
+  //     setStatus({success: true, message: 'Message sent successfully'})
+  //   } else {
+  //     setStatus({ success: false, message: 'Something went wrong, please try again later'})
+  //   }
+  // }
 
   useEffect(()=> {
     if(reveal){
@@ -73,10 +98,6 @@ if(onScreen) setReveal(onScreen)
       opacity: 1,
       stagger: 0.1,
       ease: 'back',
-    // scrollTrigger:{
-    //   start: 'top 90%',
-    //   end: 'bottom 10%',
-    // }
     })}
     }, [reveal])
 
@@ -91,20 +112,20 @@ if(onScreen) setReveal(onScreen)
           <p >Let's connect</p>
           </Col>
           <Col sm={12} md={6}>
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} ref={form}>
             
               <Col  className="px-1">
-                <input type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)}></input>
+                <input name='firstName' type="text" value={formDetails.firstName} placeholder="First Name" onChange={(e) => onFormUpdate('firstName', e.target.value)}></input>
               </Col>
               <Col  className="px-1">
-              <input type="text" value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}></input>
+              <input name='lastName' type="text" value={formDetails.lastName} placeholder="Last Name" onChange={(e) => onFormUpdate('lastName', e.target.value)}></input>
               </Col>
               <Col  className="px-1">
-              <input type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)}></input>
+              <input name='email' type="email" value={formDetails.email} placeholder="Email Address" onChange={(e) => onFormUpdate('email', e.target.value)}></input>
               </Col>
               
               <Col>
-              <textarea  value={formDetails.message} placeholder='Message' onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
+              <textarea  name="message" value={formDetails.message} placeholder='Message' onChange={(e) => onFormUpdate('message', e.target.value)}></textarea>
               <button type="submit"><span>{buttonText}</span></button>
               </Col>
               {

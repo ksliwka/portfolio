@@ -108,20 +108,20 @@ export const Tools = () => {
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
+      breakpoint: { max: 3000, min: 992 },
       items: 5,
     },
     desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+      breakpoint: { max: 992, min: 768 },
+      items: 3,
     },
     tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
+      breakpoint: { max: 768, min: 576 },
+      items: 0,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
+      breakpoint: { max: 576, min: 0 },
+      items: 0,
     },
   };
 
@@ -134,12 +134,13 @@ export const Tools = () => {
             <div className="tool-bx">
               <h1 className="tools-title"  >About</h1>
               <p data-scroll>Hello! I'm front-end developer who is looking for a first job or an internship. I am an eager to learn person, my hobby is making responsive interfaces.</p>
+              <div className="d-block d-md-none">sth</div>
               <h2 className="mb-5 d-none d-lg-block" >Skills</h2>
 
               <Carousel
                 responsive={responsive}
                 infinite={true}
-                className="tool-slider"
+                className="tool-slider "
                 
               >
                 {toolsArray.map((tool, index) => {

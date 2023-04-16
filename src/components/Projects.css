@@ -43,15 +43,15 @@
   background-size: cover;
   background-position: center;
   transform-origin: center;
-  width: 80%;
   height: 80%;
+  width: 80%;
   will-change: transform;
   transform: scale(0.5);
   transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
   filter: grayscale(100%) sepia(20%) brightness(80%);
 }
 .projects .project-item-wrapper.is-reveal .project-image {
-  transform: scale(0.8);
+  transform: scale(0.7);
   filter: none;
 }
 
@@ -150,31 +150,33 @@ font-size: 4rem;
     aspect-ratio: 16/9;
     height: 100vh;
     display: grid;
-    grid-template-columns: 30vw 1fr 10px;
+    grid-template-columns: 30vw 1fr 1px;
     width: 100vw;
   }
 
 
-  .project-image {
+
+  .project-image-small {
     background-size: cover;
     position: absolute;
-    top: 10%;
-    right: 70%;
+    bottom: 20%;
+    flex: auto;
+
     background-position: center;
     transform-origin: center;
-    width: 100%;
-    height: 100%;
+    height: auto;
+    width: 450px;
     will-change: transform;
-    transform: scale(0.4);
+    transform: scale(0.2);
     transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
     filter: grayscale(100%) sepia(20%) brightness(80%);
   }
-  .projects .project-item-wrapper.is-reveal .project-image {
-    transform: scale(0.9);
+  .projects .project-item-wrapper.is-reveal .project-image-small {
+    transform: scale(0.4);
     filter: none;
   }
 
-  .project-buttons a {
+  /* .project-buttons a {
 
     background-color: transparent;
     border: none;
@@ -196,14 +198,31 @@ font-size: 4rem;
   .project-text {
     color: white;
     text-align: left;
-  }
+  } */
   
 }
 
 /* responsive design */
 
 @media (min-width: 576px) {
+  /* .project-image-small {
+    background-size: cover;
+    position: absolute;
+    bottom: 20%;
 
+    background-position: center;
+    transform-origin: center;
+    height: auto;
+    width: 450px;
+    will-change: transform;
+    transform: scale(0.2);
+    transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    filter: grayscale(100%) sepia(20%) brightness(80%);
+  }
+  .projects .project-item-wrapper.is-reveal .project-image-small {
+    transform: scale(0.4);
+    filter: none;
+  } */
 }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -232,12 +251,13 @@ font-size: 4rem;
     letter-spacing: 0.8px;
     transition: 0.3s ease-in-out;
   }
-  .project-image {
-    /* background-size: cover; */
-    background-position: center;
+  /* .project-image {
+    background-size: cover;
+     background-position: center;
     transform-origin: center;
-    width: 65%;
-    height: 65%;
+
+    width: 100% !important;
+    height: 100%;
     will-change: transform;
     transform: scale(0.5);
     transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
@@ -246,19 +266,13 @@ font-size: 4rem;
   .projects .project-item-wrapper.is-reveal .project-image {
     transform: scale(0.8);
     filter: none;
-  }
+  }  */
   
 }
 
 /* // Large devices (desktops, 992px and up) */
 /* @media (min-width: 992px) {
-  .project-item-wrapper {
-    aspect-ratio: 16/9;
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 30vw 1fr 50px;
-    width: 100vw;
-  }
+
 } */
 
 /* // X-Large devices (large desktops, 1200px and up) */

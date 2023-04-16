@@ -39,7 +39,7 @@ function NavBar() {
               About
             </Nav.Link>
             <Nav.Link
-              href="#project-container"
+              href="#projects"
               className={
                 activeLink === "projects" ? "active navbar-link" : "navbar-link"
               }

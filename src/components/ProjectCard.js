@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import useOnScreen from "./Hooks/useOnScreen";
 import cn from "classnames";
 import { AiFillGithub, AiOutlineArrowRight } from "react-icons/ai";
-import { Row, Col, Container } from "react-bootstrap";
+import { Row, Col, Container, Image } from "react-bootstrap";
 import TextCollapse from "./Hooks/TextCollapse";
 import "./Projects.css";
 
@@ -32,19 +32,37 @@ function ProjectItem({
       ref={ref}
       style={styles}
     >
+   
+        {/* <div
+          className="project-image-small  d-block d-md-none"
+          style={{ backgroundImage: `url(${srcmd})` }}
+        >
+          </div> */}
+          <div
+          className="project-image  d-block d-md-none"
+          style={{ backgroundImage: `url(${srcmd})` }}
+        ></div>
       <div></div>
 
       <div className="project-item  ">
-        <div
+      {/* <div
           className="project-image d-none d-md-block"
           style={{ backgroundImage: `url(${srclg})` }}
         ></div>
         <div
-          className="project-image project-image-title d-block d-md-none"
-          // style={{ backgroundImage: `url(${srcmd})` }}
+          className="project-image  d-block d-md-none"
+          style={{ backgroundImage: `url(${srcmd})` }}
         >
-          {title}
-          </div>
+          </div> */}
+              {/* <div
+          className="project-image d-none d-md-block"
+          style={{ backgroundImage: `url(${srclg})` }}
+        ></div> */}
+        {/* <Image className="project-image d-none d-md-block" src={srclg}></Image> */}
+        <div
+          className="project-image d-none d-md-block"
+          style={{ backgroundImage: `url(${srclg})` }}
+        ></div> 
         <h1 className="project-background-title d-none d-lg-block">{title}</h1>
 
         <div className="project-info">
