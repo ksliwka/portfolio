@@ -1,11 +1,10 @@
 import "./Home.css";
 // import Circle from "./Circle";
-import Scroll from './Scroll'
+import Scroll from "./Scroll";
 import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
 import { useState, useEffect, useRef } from "react";
-import gsap from 'gsap'
+import gsap from "gsap";
 import SplitText from "../utils/Split3.min.js";
-
 
 import { Container, Row, Col } from "react-bootstrap";
 
@@ -17,27 +16,23 @@ function HomePage() {
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const period = 2000;
 
-useEffect(()=> {
-const split = new SplitText("#header-text", {
-  type: 'lines',
-  linesClass: 'lineChildren'
-});
-const splitParent = new SplitText('#header-text', {
-  type: 'lines',
-  linesClass: "lineParent"
-})
-gsap.to(split.lines, {
-  duration: 1.5,
-  y: 0,
-  opacity: 1,
-  stagger: 0.1,
-  ease: 'back',
-
-})
-}, [])
-
- 
-
+  useEffect(() => {
+    const split = new SplitText("#header-text", {
+      type: "lines",
+      linesClass: "lineChildren",
+    });
+    const splitParent = new SplitText("#header-text", {
+      type: "lines",
+      linesClass: "lineParent",
+    });
+    gsap.to(split.lines, {
+      duration: 1.5,
+      y: 0,
+      opacity: 1,
+      stagger: 0.1,
+      ease: "back",
+    });
+  }, []);
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -73,43 +68,37 @@ gsap.to(split.lines, {
 
   return (
     <>
-      <section id="home" className="home-container" >
-   
-        <div className="scroll"><Scroll /></div>
+      <section id="home" className="home-container">
+        <div className="scroll">
+          <Scroll />
+        </div>
 
-        
         <Container>
-        <div className="home-circle "></div>
+          <div className="home-circle "></div>
           <div className="home-circle-2 "></div>
           <Row className="align-items-sm-center  home-row">
-          
             <Col xs={10} md={9} xl={10}>
-              <div id='header-text'>
-              <h1 className="header" >
-                Hello, My name is <span>Katarzyna </span>and I am Front-End
-                Developer.
-              </h1>
-              <p className="header-p d-none d-sm-block">
-                PORTFOLIO BY <span className="wrap">{text}</span>{" "}
-              </p>
-              <a>
-                <AiFillLinkedin className="home-icon" />
-              </a>
+              <div id="header-text">
+                <h1 className="header">
+                  Hello, My name is <span>Katarzyna </span>and I am Front-End
+                  Developer.
+                </h1>
+                <p className="header-p d-none d-sm-block">
+                  PORTFOLIO BY <span className="wrap">{text}</span>{" "}
+                </p>
+                <a>
+                  <AiFillLinkedin className="home-icon" />
+                </a>
 
-              <a className="icon ms-2">
-                <AiFillGithub className="home-icon" />
-              </a>
+                <a className="icon ms-2">
+                  <AiFillGithub className="home-icon" />
+                </a>
 
-              <a className="icon ms-2">
-                <AiOutlineMail className="home-icon" />
-              </a>
+                <a className="icon ms-2">
+                  <AiOutlineMail className="home-icon" />
+                </a>
               </div>
             </Col>
-            {/* <Col xs={12} md={6} xl={5}>
-              <Circle radius="600" gradientColor="#e86b61" />
-            </Col> */}
-            
-
           </Row>
         </Container>
       </section>

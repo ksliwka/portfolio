@@ -91,11 +91,12 @@
     right: 10%;
   }
   .home-row {
-    height: 100%;
+    height:   100vh;
     margin-top: 3rem;
+    /* margin-bottom: 12rem; */
     justify-content: center;
   }
-  .home-row::after {
+  .header::after {
     content: "";
     position: absolute;
     left: 10%;

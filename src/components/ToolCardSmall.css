@@ -1,0 +1,29 @@
+.ToolCardSmall h2 {
+  font-size: 20px;
+}
+
+.ToolCardSmall li {
+  font-size: 15px;
+}
+
+.ToolCardSmall {
+  /* height: 100vh; */
+  margin-bottom: 10rem;
+}
+
+.titles {
+  font-size: 15px;
+  text-align: left;
+}
+.ToolCardSmall2::after {
+  content: "";
+  width: 90%;
+  margin: 25px 0;
+  height: 0.5px;
+  background-color: white;
+  opacity: 30%;
+}
+
+.field {
+  text-align: center;
+}

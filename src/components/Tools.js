@@ -1,5 +1,6 @@
 import "./Tools.css";
 import ToolCard from "./ToolCard";
+import ToolCardSmall from "./ToolCardSmall";
 import { Container, Row, Col, Card } from "react-bootstrap";
 
 import Carousel from "react-multi-carousel";
@@ -116,7 +117,7 @@ export const Tools = () => {
       items: 3,
     },
     tablet: {
-      breakpoint: { max: 768, min: 576 },
+      breakpoint: { max: 767, min: 576 },
       items: 0,
     },
     mobile: {
@@ -130,25 +131,34 @@ export const Tools = () => {
       <Container>
         <Row>
           <Col>
-          <div className="home-circle "></div>
+            <div className="home-circle "></div>
             <div className="tool-bx">
-              <h1 className="tools-title"  >About</h1>
-              <p data-scroll>Hello! I'm front-end developer who is looking for a first job or an internship. I am an eager to learn person, my hobby is making responsive interfaces.</p>
-              <div className="d-block d-md-none">sth</div>
-              <h2 className="mb-5 d-none d-lg-block" >Skills</h2>
-
+              <h1 className="tools-title">About</h1>
+              <p data-scroll>
+                Hello and welcome to my portfolio website! My name is Katarzyna
+                Śliwka and I am a passionate front-end developer who is eager to
+                start their career in the industry. I am excited to share my
+                portfolio with you and demonstrate my ability to build dynamic,
+                user-friendly web applications. Thank you for taking the time to
+                explore my work. If you're interested in working with me or have
+                any questions, feel free to reach out. Let's create something
+                amazing together!
+              </p>
+              <div className="d-block d-md-none mb-5">
+                <h2 className="mb-5">Skills</h2>
+                <ToolCardSmall toolsArray={toolsArray} />
+              </div>
+              <h5 className="mb-5 d-none d-lg-block skills-text">Skills</h5>
               <Carousel
                 responsive={responsive}
                 infinite={true}
                 className="tool-slider "
-                
               >
                 {toolsArray.map((tool, index) => {
                   return <ToolCard key={index} {...tool} />;
                 })}
               </Carousel>
             </div>
-
           </Col>
         </Row>
       </Container>
