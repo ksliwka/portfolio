@@ -55,8 +55,6 @@
 }
 
 .home-icon {
-  width: 25px;
-  height: 25px;
   transition: transform 0.2s;
   color: black;
 }
@@ -124,6 +122,10 @@
     font-size: 3rem;
     font-weight: 1000;
     letter-spacing: 6px;
+  }
+  .home-icon {
+    width: 25px;
+    height: 25px;
   }
 }
 

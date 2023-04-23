@@ -86,16 +86,12 @@ function HomePage() {
                 <p className="header-p d-none d-sm-block">
                   PORTFOLIO BY <span className="wrap">{text}</span>{" "}
                 </p>
-                <a>
+                <a href="https://www.linkedin.com/in/katarzyna-śliwka-460660256/">
                   <AiFillLinkedin className="home-icon" />
                 </a>
 
-                <a className="icon ms-2">
+                <a className="ms-2" href="https://github.com/ksliwka">
                   <AiFillGithub className="home-icon" />
-                </a>
-
-                <a className="icon ms-2">
-                  <AiOutlineMail className="home-icon" />
                 </a>
               </div>
             </Col>

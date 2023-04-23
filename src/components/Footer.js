@@ -15,14 +15,11 @@ const Footer = () => {
             THANKS FOR <span className="outline-txt">SCROLLING</span> DOWN.
           </h2>
           <div>
-            <a>
+            <a href="https://www.linkedin.com/in/katarzyna-śliwka-460660256/">
               <AiFillLinkedin className="social-icon" />
             </a>
-            <a>
+            <a href="https://github.com/ksliwka">
               <AiFillGithub className="social-icon" />
-            </a>
-            <a>
-              <AiOutlineMail className="social-icon" />
             </a>
           </div>
         </Row>
