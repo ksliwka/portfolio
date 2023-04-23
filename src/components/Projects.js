@@ -19,10 +19,9 @@ const images = [
     description:
       "This platform was designed to allow individuals to easily exchange or sell plants to others. By creating an account, users can sell their own plants, participate in plant exchanges, and provide and receive reviews. Application aims to offer a secure and user-friendly marketplace for plant enthusiasts to connect and share their knowledge.",
     tools: "JS",
-    srclg: plantsMockup,
-    srcmd: plantSmall,
-    gitHub: "https://github.com/ksliwka",
-    website: "sth",
+    src: plantsMockup,
+    gitHub: "https://github.com/ksliwka/ecommerce_plant",
+    website: "https://plants-qeo1.onrender.com/",
     color: "#87a2ff",
   },
   {
@@ -31,9 +30,8 @@ const images = [
     description:
       "The portfolio website was built with React and features learned skills with additional animations for a visually engaging experience.",
     tools: "JS",
-    srclg: portfolioMockup,
-    srcmd: portfolioSmall,
-    gitHub: "https://github.com/ksliwka",
+    src: portfolioMockup,
+    gitHub: "https://github.com/ksliwka/portfolio",
     website: "#87a2ff",
     color: "#C28CFF",
   },
@@ -43,10 +41,9 @@ const images = [
     description:
       "The food order app simplifies the process of ordering food with its user-friendly interface and advanced features. Users can choose from a wide range of food items, add them to a basket, and adjust the quantities as needed. ",
     tools: "JS",
-    srclg: foodyMockup,
-    srcmd: foodySmall,
-    gitHub: "https://github.com/ksliwka",
-    website: "sth",
+    src: foodyMockup,
+    gitHub: "https://github.com/ksliwka/food_order_app_react",
+    website: "https://ksliwka.github.io/food_order_app_react/",
     color: "#006663",
   },
 ];
@@ -63,7 +60,6 @@ export default function Projects({ src, index, columnOffset }) {
         ease: "none",
 
         scrollTrigger: {
-          // start: 'top top',
           start: "center center",
           trigger: slider.current,
           pin: true,
