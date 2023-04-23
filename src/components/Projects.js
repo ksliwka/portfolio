@@ -32,7 +32,7 @@ const images = [
     tools: "JS",
     src: portfolioMockup,
     gitHub: "https://github.com/ksliwka/portfolio",
-    website: "#87a2ff",
+    website: "https://ksliwka.github.io/portfolio/",
     color: "#C28CFF",
   },
   {
