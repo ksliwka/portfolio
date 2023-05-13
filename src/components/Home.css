@@ -87,7 +87,6 @@
   .home-row {
     height:   100vh;
     margin-top: 3rem;
-    /* margin-bottom: 12rem; */
     justify-content: center;
   }
   .header::after {

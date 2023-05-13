@@ -1,8 +1,7 @@
 import "./Home.css";
-// import Circle from "./Circle";
 import Scroll from "./Scroll";
-import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
-import { useState, useEffect, useRef } from "react";
+import { AiFillLinkedin, AiFillGithub} from "react-icons/ai";
+import { useState, useEffect} from "react";
 import gsap from "gsap";
 import SplitText from "../utils/Split3.min.js";
 
