@@ -1,6 +1,6 @@
 import { Container, Row } from "react-bootstrap";
 import "./Footer.css";
-import { AiFillLinkedin, AiFillGithub, AiOutlineMail } from "react-icons/ai";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 
 const Footer = () => {
   return (
