@@ -20,10 +20,7 @@ function HomePage() {
       type: "lines",
       linesClass: "lineChildren",
     });
-    const splitParent = new SplitText("#header-text", {
-      type: "lines",
-      linesClass: "lineParent",
-    });
+   
     gsap.to(split.lines, {
       duration: 1.5,
       y: 0,
