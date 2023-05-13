@@ -1,6 +1,6 @@
-import "./NavBar.css";
 import { useState } from "react";
 
+import "./NavBar.css";
 import { Navbar, Container, Nav } from "react-bootstrap";
 
 function NavBar() {
@@ -62,21 +62,5 @@ function NavBar() {
     </Navbar>
   );
 }
-
-// function NavBar() {
-//   return (
-//     <header className={classes.header}>
-//       <nav>
-//         <ul className={classes.list}>
-//           <li>
-//             <a>About</a>
-//             <a>Projects</a>
-//             <a>Contact</a>
-//           </li>
-//         </ul>
-//       </nav>
-//     </header>
-//   );
-// }
 
 export default NavBar;
