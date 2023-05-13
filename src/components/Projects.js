@@ -15,7 +15,7 @@ const images = [
     title: "Plant app",
     description:
       "This platform was designed to allow individuals to easily exchange or sell plants to others. By creating an account, users can sell their own plants, participate in plant exchanges, and provide and receive reviews. Application aims to offer a secure and user-friendly marketplace for plant enthusiasts to connect and share their knowledge.",
-    tools: "JS",
+    tools: "JS, Express, Node.js, EJS, MongoDB, Bootstrap, CSS",
     src: plantsMockup,
     gitHub: "https://github.com/ksliwka/ecommerce_plant",
     website: "https://plants-qeo1.onrender.com/",
@@ -26,7 +26,7 @@ const images = [
     title: "Portfolio",
     description:
       "The portfolio website was built with React and features learned skills with additional animations for a visually engaging experience.",
-    tools: "JS",
+    tools: "React, Bootstrap, CSS",
     src: portfolioMockup,
     gitHub: "https://github.com/ksliwka/portfolio",
     website: "https://ksliwka.github.io/portfolio/",
@@ -37,7 +37,7 @@ const images = [
     title: "Food order app",
     description:
       "The food order app simplifies the process of ordering food with its user-friendly interface and advanced features. Users can choose from a wide range of food items, add them to a basket, and adjust the quantities as needed. ",
-    tools: "JS",
+    tools: "React, CSS",
     src: foodyMockup,
     gitHub: "https://github.com/ksliwka/food_order_app_react",
     website: "https://ksliwka.github.io/food_order_app_react/",
