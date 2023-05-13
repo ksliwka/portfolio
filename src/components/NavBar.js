@@ -11,7 +11,7 @@ function NavBar() {
   };
 
   return (
-    <Navbar expand="md" sticky="top" className="mt-3">
+    <Navbar expand="md" className="mt-3">
       <Container>
         <Navbar.Toggle aria-controls="basic-navbar-nav" className="m-4">
           <span className="toggler-icon top-bar" />
