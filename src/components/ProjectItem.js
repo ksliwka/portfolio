@@ -1,11 +1,10 @@
 import React, { useRef } from "react";
-
-import useOnScreen from "./Hooks/useOnScreen";
-import cn from "classnames";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import cn from "classnames";
+import "./Projects.css";
 import { Row, Col } from "react-bootstrap";
 import TextCollapse from "./Hooks/TextCollapse";
-import "./Projects.css";
+import useOnScreen from "./Hooks/useOnScreen";
 
 function ProjectItem({
   src,
@@ -31,28 +30,22 @@ function ProjectItem({
       ref={ref}
       style={styles}
     >
-        <div
-          className="project-small-title  d-block d-md-none"
-          
-        >{title}</div> 
+      <div className="project-small-title  d-block d-md-none">{title}</div>
       <div></div>
-
       <div className="project-item  ">
         <div
           className="project-image d-none d-md-block"
           style={{ backgroundImage: `url(${src})` }}
-        ></div> 
+        ></div>
         <h1 className="project-background-title d-none d-lg-block">{title}</h1>
 
         <div className="project-info">
           <h2 className="project-number d-none d-lg-block">{number}</h2>
-
-          <Row >
+          <Row>
             <Col md={8}>
               <div className="project-text " id="project-description">
                 <h3 className="d-none d-lg-block">About</h3>
 
-                
                 <p className="project-description  d-none d-md-block">
                   {description}
                 </p>
@@ -70,7 +63,6 @@ function ProjectItem({
                 <a href={gitHub} type="button">
                   Code <AiOutlineArrowRight />
                 </a>
-
                 <a href={website} type="button">
                   Webiste <AiOutlineArrowRight />
                 </a>

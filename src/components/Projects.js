@@ -1,14 +1,11 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
-import ProjectItem from "./ProjectCard";
+import ProjectItem from "./ProjectItem";
 import "./Projects.css";
 import plantsMockup from "../Assets/plants-mockup.png";
 import portfolioMockup from "../Assets/portfolio-mockup.png";
 import foodyMockup from "../Assets/foody-mockup.png";
-import plantSmall from "../Assets/plant-small.JPG";
-import portfolioSmall from "../Assets/portfolio-small.png";
-import foodySmall from "../Assets/foody-small.JPG";
 
 gsap.registerPlugin(ScrollTrigger);
 
