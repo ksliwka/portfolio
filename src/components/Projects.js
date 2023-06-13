@@ -5,7 +5,7 @@ import ProjectItem from "./ProjectItem";
 import "./Projects.css";
 import plantsMockup from "../Assets/plants-mockup.png";
 import portfolioMockup from "../Assets/portfolio-mockup.png";
-import foodyMockup from "../Assets/foody-mockup.png";
+import propertyMockup from "../Assets/property-mockup.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -34,13 +34,13 @@ const images = [
   },
   {
     number: "03",
-    title: "Food order app",
+    title: "Property rental",
     description:
-      "The food order app simplifies the process of ordering food with its user-friendly interface and advanced features. Users can choose from a wide range of food items, add them to a basket, and adjust the quantities as needed. ",
-    tools: "React, CSS",
-    src: foodyMockup,
-    gitHub: "https://github.com/ksliwka/food_order_app_react",
-    website: "https://ksliwka.github.io/food_order_app_react/",
+      " The propert rental website allows to discover available properties, share your own, and favorite the ones that catch your eye. With an interactive map, you can visually explore the locations of the properties and easily find the perfect rental. Whether you're searching for a cozy apartment or a spacious house, our platform makes it simple to filter through options.",
+    tools: "React, NextJS, MongoDB, Bootstrap,CSS",
+    src: propertyMockup,
+    gitHub: "https://github.com/ksliwka/property_rental",
+    website: "https://property-rental-pak8hj32o-ksliwka.vercel.app",
     color: "#006663",
   },
 ];

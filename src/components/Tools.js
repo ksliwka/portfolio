@@ -1,7 +1,7 @@
 import "./Tools.css";
 import ToolCard from "./ToolCard";
 import ToolCardSmall from "./ToolCardSmall";
-import { Container, Row, Col, Card } from "react-bootstrap";
+import { Container, Row, Col} from "react-bootstrap";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -25,6 +25,7 @@ import {
   SiAdobeillustrator,
   SiAdobeindesign,
   SiAdobephotoshop,
+  SiNextdotjs,
 } from "react-icons/si";
 
 const toolsArray = [
@@ -64,8 +65,13 @@ const toolsArray = [
     field: "Front-End",
   },
   {
+    icon: <SiNextdotjs className="icon" />,
+    title: "Next.js",
+    field: "Front-End, Back-End",
+  },
+  {
     icon: <DiNodejsSmall className="icon" />,
-    title: "Node",
+    title: "Node.js",
     field: "Back-End",
   },
   {

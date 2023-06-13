@@ -30,11 +30,11 @@ function ProjectItem({
       ref={ref}
       style={styles}
     >
-      <div className="project-small-title  d-block d-md-none">{title}</div>
+      <div className="project-small-title  d-block d-lg-none">{title}</div>
       <div></div>
       <div className="project-item  ">
         <div
-          className="project-image d-none d-md-block"
+          className="project-image d-none d-lg-block"
           style={{ backgroundImage: `url(${src})` }}
         ></div>
         <h1 className="project-background-title d-none d-lg-block">{title}</h1>
@@ -42,14 +42,14 @@ function ProjectItem({
         <div className="project-info">
           <h2 className="project-number d-none d-lg-block">{number}</h2>
           <Row>
-            <Col md={8}>
+            <Col lg={8}>
               <div className="project-text " id="project-description">
                 <h3 className="d-none d-lg-block">About</h3>
 
-                <p className="project-description  d-none d-md-block">
+                <p className="project-description  d-none d-lg-block">
                   {description}
                 </p>
-                <div className="d-block d-md-none">
+                <div className="d-block d-lg-none">
                   <TextCollapse
                     text={description}
                     maxLength={10}
@@ -58,7 +58,7 @@ function ProjectItem({
                 <p className="project-tools">{tools}</p>
               </div>
             </Col>
-            <Col md={4}>
+            <Col lg={4}>
               <div className="project-buttons d-grid gap-3">
                 <a href={gitHub} type="button">
                   Code <AiOutlineArrowRight />
