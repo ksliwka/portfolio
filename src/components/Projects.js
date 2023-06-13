@@ -37,7 +37,7 @@ const images = [
     title: "Property rental",
     description:
       " The propert rental website allows to discover available properties, share your own, and favorite the ones that catch your eye. With an interactive map, you can visually explore the locations of the properties and easily find the perfect rental. Whether you're searching for a cozy apartment or a spacious house, our platform makes it simple to filter through options.",
-    tools: "React, NextJS, MongoDB, Bootstrap,CSS",
+    tools: "React, NextJS, MongoDB, Bootstrap, CSS",
     src: propertyMockup,
     gitHub: "https://github.com/ksliwka/property_rental",
     website: "https://property-rental-pak8hj32o-ksliwka.vercel.app",

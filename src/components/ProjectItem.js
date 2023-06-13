@@ -55,7 +55,10 @@ function ProjectItem({
                     maxLength={10}
                   ></TextCollapse>
                 </div>
-                <p className="project-tools">{tools}</p>
+                <p className="project-tools">
+                  <span className="toolsSpan">Tools:</span>
+                  {tools}
+                </p>
               </div>
             </Col>
             <Col lg={4}>
