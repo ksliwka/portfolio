@@ -152,25 +152,6 @@
     width: 100vw;
   }
 
-  .project-image-small {
-    background-size: cover;
-    position: absolute;
-    bottom: 20%;
-    flex: auto;
-
-    background-position: center;
-    transform-origin: center;
-    height: auto;
-    width: 450px;
-    will-change: transform;
-    transform: scale(0.2);
-    transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
-    filter: grayscale(100%) sepia(20%) brightness(80%);
-  }
-  .projects .project-item-wrapper.is-reveal .project-image-small {
-    transform: scale(0.4);
-    filter: none;
-  }
 
   .project-small-title {
     font-size: 4rem;
@@ -230,6 +211,40 @@
   }
   .projects .project-item-wrapper.is-reveal .project-small-title {
     transform: scale(0.6);
+    filter: none;
+  }
+  .project-image {
+    background-size: cover;
+    background-position: center;
+    transform-origin: center;
+    height: 60%;
+    width: 60%;
+    will-change: transform;
+    transform: scale(0.5);
+    transition: all 1.5s cubic-bezier(0.77, 0, 0.175, 1);
+    filter: grayscale(100%) sepia(20%) brightness(80%);
+  }
+}
+
+@media (max-width: 1550px) {
+  .project-image {
+    background-size: cover;
+    background-position: center;
+    transform-origin: center;
+    height: 70%;
+    width: 70%;
+    max-height: 500px; 
+    max-width: 500px; 
+    will-change: transform;
+    transform: scale(0.5);
+    transition: all 1.5s cubic-bezier(0.1, 0, 0.175, 1);
+    filter: grayscale(100%) sepia(20%) brightness(80%);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+  }
+  .projects .project-item-wrapper.is-reveal .project-image {
+    transform: scale(0.8);
     filter: none;
   }
 }

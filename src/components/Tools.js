@@ -1,7 +1,7 @@
 import "./Tools.css";
 import ToolCard from "./ToolCard";
 import ToolCardSmall from "./ToolCardSmall";
-import { Container, Row, Col} from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
@@ -26,6 +26,7 @@ import {
   SiAdobeindesign,
   SiAdobephotoshop,
   SiNextdotjs,
+  SiTypescript,
 } from "react-icons/si";
 
 const toolsArray = [
@@ -62,6 +63,11 @@ const toolsArray = [
   {
     icon: <SiReactrouter className="icon" />,
     title: "React Router",
+    field: "Front-End",
+  },
+  {
+    icon: <SiTypescript className="icon" />,
+    title: "TypeScript",
     field: "Front-End",
   },
   {
@@ -140,7 +146,7 @@ export const Tools = () => {
             <div className="home-circle "></div>
             <div className="tool-bx">
               <h1 className="tools-title">About</h1>
-              <p data-scroll >
+              <p data-scroll>
                 Hello and welcome to my portfolio website! My name is Katarzyna
                 Śliwka and I am a passionate front-end developer who is eager to
                 start their career in the industry. I am excited to share my
