@@ -5,11 +5,7 @@ import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
 const Footer = () => {
   return (
     <section className="footer" id="footer" data-scroll-section>
-      <Container className="op-class"
-            data-scroll
-            data-scroll-class="fadeIn"
-            data-scroll-repeat="true"
-            data-scroll-speed="2">
+      <Container className="op-class">
         <Row className="text-center footer-box">
           <h2 > 
             THANKS FOR <span className="outline-txt">SCROLLING</span> DOWN.

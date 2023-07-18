@@ -1,26 +1,19 @@
 import "./Home.css";
 import Scroll from "./Scroll";
-import { AiFillLinkedin, AiFillGithub} from "react-icons/ai";
-import { useState, useEffect} from "react";
+import { AiFillLinkedin, AiFillGithub } from "react-icons/ai";
+import { useEffect } from "react";
 import gsap from "gsap";
 import SplitText from "../utils/Split3.min.js";
 
 import { Container, Row, Col } from "react-bootstrap";
 
 function HomePage() {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const toRotate = ["KATARZYNA ŚLIWKA"];
-  const [text, setText] = useState("");
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const period = 2000;
-
   useEffect(() => {
     const split = new SplitText("#header-text", {
       type: "lines",
       linesClass: "lineChildren",
     });
-   
+
     gsap.to(split.lines, {
       duration: 1.5,
       y: 0,
@@ -30,45 +23,12 @@ function HomePage() {
     });
   }, []);
 
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-    return () => {
-      clearInterval(ticker);
-    };
-  }, [text]);
-
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting
-      ? fullText.substring(0, text.length - 1)
-      : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta((prevDelta) => prevDelta / 2);
-    }
-
-    if (isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setDelta(period);
-    } else if (isDeleting && updatedText === "") {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setDelta(500);
-    }
-  };
-
   return (
     <>
       <section id="home" className="home-container">
         <div className="scroll">
           <Scroll />
         </div>
-
         <Container>
           <div className="home-circle "></div>
           <div className="home-circle-2 "></div>
@@ -80,7 +40,7 @@ function HomePage() {
                   Developer.
                 </h1>
                 <p className="header-p d-none d-sm-block">
-                  PORTFOLIO BY <span className="wrap">{text}</span>{" "}
+                  PORTFOLIO BY KATARZYNA ŚLIWKA{" "}
                 </p>
                 <a href="https://www.linkedin.com/in/katarzyna-śliwka-460660256/">
                   <AiFillLinkedin className="home-icon" />
