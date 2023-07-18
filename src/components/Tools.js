@@ -145,7 +145,7 @@ export const Tools = () => {
             <div className="home-circle "></div>
             <div className="tool-bx">
               <h1 className="tools-title">About</h1>
-              <p data-scroll>
+              <p data-scroll className="text-start text-md-center">
                 Hello and welcome to my portfolio website! My name is Katarzyna
                 Śliwka and I am a passionate front-end developer who is eager to
                 start their career in the industry. I am excited to share my
@@ -156,7 +156,6 @@ export const Tools = () => {
                 amazing together!
               </p>
               <div className="d-block d-md-none mb-5">
-                <h2 className="mb-5">Skills</h2>
                 <ToolCardSmall toolsArray={toolsArray} />
               </div>
               <h5 className="mb-5 d-none d-lg-block skills-text">Skills</h5>

@@ -74,9 +74,11 @@
     font-size: 2rem;
     font-weight: 800;
     letter-spacing: 6px;
+    margin-top: 250px;
   }
   .tools {
     padding: 0 0 50px 0;
     height: 100vh;
+    margin-bottom: 250px;
   }
 }

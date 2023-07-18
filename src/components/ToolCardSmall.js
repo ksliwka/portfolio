@@ -19,7 +19,7 @@ const ToolCardSmall = (props) => {
   return (
     <Container className="ToolCardSmall">
       <Row className="ToolCardSmall2 justify-content-center align-items-center mb-2">
-        <Col xs={4} className="field">
+        <Col xs={4} className="field text-start">
           <h2>Front-End</h2>
         </Col>
         <Col className="titles">
@@ -29,17 +29,17 @@ const ToolCardSmall = (props) => {
         </Col>
       </Row>
       <Row className="ToolCardSmall2 justify-content-center align-items-center mb-2">
-        <Col xs={4} className="field">
+        <Col xs={4} className="field text-start">
           <h2>Back-End</h2>
         </Col>
-        <Col className="titles">
+        <Col className="titles text-start">
           {backEndTitles.map((title) => (
             <span key={title}>{title} </span>
           ))}
         </Col>
       </Row>
       <Row className="ToolCardSmall2 justify-content-center align-items-center mb-2">
-        <Col xs={4} className="field">
+        <Col xs={4} className="field text-start">
           <h2>Database</h2>
         </Col>
         <Col className="titles">
@@ -49,17 +49,17 @@ const ToolCardSmall = (props) => {
         </Col>
       </Row>
       <Row className="ToolCardSmall2 justify-content-center align-items-center mb-2">
-        <Col xs={4} className="field">
+        <Col xs={4} className="field text-start">
           <h2>Design</h2>
         </Col>
-        <Col className="titles">
+        <Col className="titles ">
           {designTitles.map((title) => (
             <span key={title}>{title} </span>
           ))}
         </Col>
       </Row>
       <Row className="ToolCardSmall2 justify-content-center align-items-center mb-2">
-        <Col xs={4} className="field">
+        <Col xs={4} className="field text-start">
           <h2>Other</h2>
         </Col>
         <Col className="titles">
