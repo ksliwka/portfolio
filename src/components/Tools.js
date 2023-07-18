@@ -120,7 +120,6 @@ const toolsArray = [
 export const Tools = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 3000, min: 992 },
       items: 5,
     },
